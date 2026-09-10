@@ -1,0 +1,168 @@
+/* byousri.com — feuille de style des pages de contenu.
+   Reprend les jetons de couleur et la typographie de la page d'accueil. */
+:root{
+  --ink:#141B2E;
+  --chalk:#F5F1E8;
+  --plum:#533255;
+  --muted:#5a6070;
+  --line:rgba(20,27,46,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{
+  background:var(--chalk);
+  color:var(--ink);
+  font-family:ui-sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size:1.0625rem;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.display{
+  font-family:"Bricolage Grotesque", ui-sans-serif, sans-serif;
+  font-weight:700;
+  letter-spacing:-0.03em;
+  line-height:1.08;
+}
+.wrap{max-width:70rem;margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+.reading{max-width:44rem}
+
+/* ---------- header ---------- */
+.site-header{background:var(--ink);color:var(--chalk)}
+.site-header .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding-block:1.05rem;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.brand img{width:2rem;height:2rem;flex:none;object-fit:contain}
+.brand span{
+  font-family:"Bricolage Grotesque", ui-sans-serif, sans-serif;
+  font-weight:700;letter-spacing:-0.02em;font-size:1.05rem;white-space:nowrap;
+}
+.site-nav{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.92rem}
+.site-nav a{text-decoration:none;opacity:.85}
+.site-nav a:hover,.site-nav a[aria-current="page"]{opacity:1;text-decoration:underline;text-underline-offset:.35em}
+
+/* ---------- fil d'ariane ---------- */
+.breadcrumb{font-size:.85rem;color:var(--muted);padding-block:1.5rem 0}
+.breadcrumb ol{list-style:none;display:flex;gap:.5rem;flex-wrap:wrap}
+.breadcrumb li+li::before{content:"›";margin-inline-end:.5rem;opacity:.5}
+.breadcrumb a{text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+
+/* ---------- titre d'article ---------- */
+.page-head{padding-block:2.5rem 1rem}
+.kicker{
+  font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--plum);font-weight:600;margin-bottom:1.1rem;
+}
+h1.display{font-size:clamp(2rem,5.5vw,3.4rem);margin-bottom:1.2rem}
+.standfirst{font-size:1.2rem;line-height:1.6;color:var(--muted);max-width:40rem}
+.byline{
+  margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid var(--line);
+  font-size:.9rem;color:var(--muted);line-height:1.55;
+}
+.byline a{color:var(--plum);font-weight:600}
+
+/* ---------- corps ---------- */
+article{padding-block:1rem 3rem}
+article h2{
+  font-family:"Bricolage Grotesque", ui-sans-serif, sans-serif;
+  font-weight:700;letter-spacing:-0.02em;line-height:1.2;
+  font-size:clamp(1.4rem,3.2vw,1.9rem);
+  margin-top:3rem;margin-bottom:1rem;
+}
+article h3{
+  font-family:"Bricolage Grotesque", ui-sans-serif, sans-serif;
+  font-weight:700;letter-spacing:-0.015em;
+  color:var(--plum);
+  font-size:1.22rem;line-height:1.35;
+  margin-top:2.2rem;margin-bottom:.65rem;
+}
+article p{margin-bottom:1.15rem}
+article ul,article ol{margin:0 0 1.4rem 1.35rem}
+article li{margin-bottom:.6rem}
+article strong{font-weight:700}
+article a{color:var(--plum);text-decoration:underline;text-underline-offset:.2em}
+
+blockquote{
+  border-left:3px solid var(--plum);
+  padding:.2rem 0 .2rem 1.4rem;
+  margin:2rem 0;
+  font-size:1.15rem;line-height:1.55;
+}
+hr.rule{border:none;border-top:1px solid var(--line);margin-block:3rem}
+
+.callout{
+  background:rgba(83,50,85,.06);
+  border:1px solid rgba(83,50,85,.18);
+  padding:1.3rem 1.5rem;
+  margin:2.2rem 0;
+}
+.callout p:last-child{margin-bottom:0}
+.callout .callout-title{font-weight:700;margin-bottom:.5rem}
+
+/* ---------- FAQ ---------- */
+.faq{margin-top:1.5rem}
+.faq details{border-bottom:1px solid var(--line);padding-block:1.1rem}
+.faq summary{cursor:pointer;font-weight:700;list-style:none;line-height:1.45}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";color:var(--plum);font-weight:700;margin-inline-end:.6rem}
+.faq details[open] summary::before{content:"–"}
+.faq details p{margin-top:.8rem;margin-bottom:0}
+
+/* ---------- cartes d'articles ---------- */
+.cards{list-style:none;display:grid;gap:1.5rem;margin:2.5rem 0 0;padding:0;
+  grid-template-columns:repeat(auto-fit,minmax(17rem,1fr))}
+.cards li{margin:0}
+.cards a{
+  display:block;height:100%;text-decoration:none;
+  border:1px solid var(--line);padding:1.5rem;background:rgba(255,255,255,.4);
+  transition:border-color .2s ease, transform .2s ease;
+}
+.cards a:hover{border-color:var(--plum);transform:translateY(-2px)}
+.cards h2,.cards h3{margin:0 0 .6rem;font-size:1.18rem;line-height:1.3;
+  font-family:"Bricolage Grotesque", ui-sans-serif, sans-serif;letter-spacing:-0.02em}
+.cards p{margin:0;color:var(--muted);font-size:.96rem;line-height:1.55}
+
+/* ---------- appel à l'action ---------- */
+.cta-block{background:var(--ink);color:var(--chalk);padding-block:3.5rem}
+.cta-block h2{
+  font-family:"Bricolage Grotesque", ui-sans-serif, sans-serif;
+  font-weight:700;letter-spacing:-0.03em;line-height:1.1;
+  font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:.9rem;
+}
+.cta-block p{margin-bottom:1.8rem;max-width:34rem;opacity:.85}
+.cta{
+  display:inline-block;background:var(--plum);color:var(--chalk);
+  text-decoration:none;
+  font-family:"Bricolage Grotesque", ui-sans-serif, sans-serif;
+  font-weight:700;font-size:1rem;padding:.9em 1.8em;border:1px solid var(--plum);
+}
+.cta:hover{background:var(--chalk);color:var(--ink);border-color:var(--chalk)}
+.cta-block .phone{display:inline-block;margin-inline-start:1.5rem;
+  color:var(--chalk);text-decoration:none;opacity:.8;font-size:.95rem}
+.cta-block .phone:hover{opacity:1;text-decoration:underline}
+
+/* ---------- pied de page ---------- */
+footer{background:var(--ink);color:var(--chalk);padding-block:2.5rem;
+  border-top:1px solid rgba(245,241,232,.12)}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;
+  font-size:.9rem}
+footer nav{display:flex;gap:1.25rem;flex-wrap:wrap}
+footer a{text-decoration:none;opacity:.8}
+footer a:hover{opacity:1;text-decoration:underline}
+footer .legal{margin-top:1.2rem;opacity:.6;max-width:46em}
+footer .legal summary{cursor:pointer}
+footer .legal p{margin-top:.8em}
+
+:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+.site-header :focus-visible,.cta-block :focus-visible,footer :focus-visible{outline-color:var(--chalk)}
+
+@media (max-width:40rem){
+  .cta-block .phone{display:block;margin:1.1rem 0 0}
+}

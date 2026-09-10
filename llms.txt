@@ -67,6 +67,34 @@ Yousri Bendiabdallah est intervenu dans les médias suivants :
 - [الصفحة الرئيسية (العربية)](https://byousri.com/?lang=ar) : النسخة العربية من الموقع.
 - [Home (English)](https://byousri.com/?lang=en) : English version of the site.
 
+## Contenus de fond
+
+Textes écrits par Yousri Bendiabdallah à partir de sa pratique clinique. Ils
+sont en français.
+
+- [Le trauma psychique : comprendre ce qui reste, et s'en libérer](https://byousri.com/traumas/) :
+  page de référence sur le trauma. Ce qu'est un trauma (l'empreinte, pas
+  l'événement), distinction trauma simple / trauma complexe, manifestations
+  des années après (hypervigilance, mémoire traumatique, évitement,
+  dissociation, honte, difficultés relationnelles), pourquoi le temps seul ne
+  suffit pas, et les principes d'un travail thérapeutique sérieux.
+- [La dépendance affective : reconnaître, comprendre, en sortir](https://byousri.com/dependance-affective/) :
+  page de référence sur la dépendance affective. Définition, ce qu'elle n'est
+  pas, signes caractéristiques, origine dans l'histoire d'attachement,
+  mécanisme du renforcement intermittent, et chemin pour retrouver la capacité
+  de choisir.
+- [Sept signes qu'un trauma ancien agit encore aujourd'hui](https://byousri.com/articles/signes-trauma-ancien/) :
+  réactions disproportionnées, fatigue chronique inexpliquée, dissociation,
+  besoin de contrôle, culpabilité de ce qu'on a subi, schémas relationnels
+  répétitifs, incapacité au repos.
+- [Pourquoi on reste dans une relation qui fait mal](https://byousri.com/articles/pourquoi-on-reste/) :
+  renforcement intermittent, remise en cause de sa propre perception,
+  isolement, espoir entretenu, coût des investissements passés.
+- [À quoi ressemble une première séance](https://byousri.com/articles/premiere-seance/) :
+  déroulé concret d'un premier rendez-vous, ce qui est demandé et ce qui ne
+  l'est pas, durée, fréquence, langue, séances à distance.
+- [Tous les articles](https://byousri.com/articles/)
+
 ## Résumé en arabe / ملخص بالعربية
 
 يسري بندي عبد الله: معالج نفسي وكوتش في المغرب، مختص في الصدمات النفسية
@@ -89,4 +117,7 @@ WhatsApp (+212 719 597 979). Main social account: Instagram @byousri.
   de suivi. Tout échange passe par WhatsApp, à l'initiative de la personne.
 - Ce site et cet accompagnement ne remplacent pas un avis médical. En cas
   d'urgence, il faut contacter les services de secours (au Maroc : 141 pour
-  le SAMU, 190 pour la police, 150 pour la protection civile).
+  le SAMU, 190 pour la police, 150 pour la protection civile). Numéro
+  national d'écoute pour les femmes victimes de violences : 8350.
+- Les contenus de fond ci-dessus sont rédigés en français. Les consultations,
+  elles, se déroulent aussi bien en arabe (y compris en darija) qu'en français.

@@ -305,6 +305,27 @@ footer a:hover{opacity:1;text-decoration:underline}
 @media (prefers-reduced-motion: reduce){
   .js .reveal{transform:none;transition:opacity .6s ease}
 }
+
+/* ---------- écrits ---------- */
+.writing-list{list-style:none;border-top:1px solid rgba(20,27,46,.16)}
+.writing-list li{border-bottom:1px solid rgba(20,27,46,.16)}
+.writing-list a{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1.5rem;
+  padding-block:1.35rem;text-decoration:none;
+  font-family:"Bricolage Grotesque", ui-sans-serif, sans-serif;
+  font-weight:700;letter-spacing:-0.02em;line-height:1.3;
+  font-size:clamp(1.05rem,2.2vw,1.35rem);
+  transition:color .2s ease;
+}
+html[lang="ar"] .writing-list a{font-family:"Noto Kufi Arabic", sans-serif;letter-spacing:0;line-height:1.7}
+.writing-list a:hover{color:var(--plum)}
+.writing-list a::after{content:"\2192";opacity:.35;flex:none;font-weight:400}
+html[lang="ar"] .writing-list a::after{content:"\2190"}
+.writing-list a:hover::after{opacity:1}
+.writings .more{
+  display:inline-block;margin-top:2rem;color:var(--plum);font-weight:700;
+  text-decoration:underline;text-underline-offset:.3em;
+}
 </style>
 
 <script type="application/ld+json">
@@ -468,6 +489,23 @@ footer a:hover{opacity:1;text-decoration:underline}
 </section>
 
 
+<hr class="rule">
+
+<section class="writings" id="ecrits">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="writings.kicker">Écrits</p>
+    <h2 class="display section-title reveal" data-i18n="writings.title">Comprendre ce que l’on traverse.</h2>
+    <ul class="writing-list reveal">
+      <li><a href="/traumas/" data-i18n="writings.l1">Le trauma psychique : comprendre ce qui reste</a></li>
+      <li><a href="/dependance-affective/" data-i18n="writings.l2">La dépendance affective : reconnaître, comprendre, en sortir</a></li>
+      <li><a href="/articles/signes-trauma-ancien/" data-i18n="writings.l3">Sept signes qu’un trauma ancien agit encore aujourd’hui</a></li>
+      <li><a href="/articles/pourquoi-on-reste/" data-i18n="writings.l4">Pourquoi on reste dans une relation qui fait mal</a></li>
+      <li><a href="/articles/premiere-seance/" data-i18n="writings.l5">À quoi ressemble une première séance</a></li>
+    </ul>
+    <p class="reveal"><a class="more" href="/articles/" data-i18n="writings.all">Tous les articles</a></p>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="wrap">
     <p class="kicker reveal" data-i18n="contact.kicker" style="color:var(--chalk);opacity:.7">Contact</p>
@@ -490,6 +528,7 @@ footer a:hover{opacity:1;text-decoration:underline}
       </details>
     </div>
     <nav aria-label="Réseaux sociaux">
+      <a href="/articles/">Articles</a>
       <a href="https://www.youtube.com/@byousri" target="_blank" rel="noopener">YouTube</a>
       <a href="https://www.instagram.com/byousri/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.tiktok.com/@byousri" target="_blank" rel="noopener">TikTok</a>
@@ -541,6 +580,14 @@ fr:{
   'about.photoAlt':'Portrait de Yousri Bendiabdallah',
   'about.body':'<p>Entrepreneur, coach et praticien en psychothérapie, spécialisé dans les traumas.</p><p>Comme beaucoup, j’ai traversé des épreuves qui m’ont appris une chose : la douleur peut changer un homme, mais elle ne décide pas de son avenir. Ces épreuves ne sont pas des parenthèses dans ma vie. Elles sont la raison de ce métier.</p><p>Je vois aussi l’autre versant. Quand on comprend ce qu’on traverse, quand on trouve un espace sûr et un appui juste, on se remet debout. On retrouve confiance. On écrit un chapitre nouveau.</p><p>Ma mission : aider à se comprendre, faire la paix avec hier, construire un avenir que les blessures d’avant ne gouvernent plus.</p><p class="closing">Consulter n’est pas une faiblesse. C’est un acte de courage. Un pas vers la liberté.</p>',
   'media.kicker':'Vu et entendu',
+  'writings.kicker':'Écrits',
+  'writings.title':'Comprendre ce que l’on traverse.',
+  'writings.l1':'Le trauma psychique : comprendre ce qui reste',
+  'writings.l2':'La dépendance affective : reconnaître, comprendre, en sortir',
+  'writings.l3':'Sept signes qu’un trauma ancien agit encore aujourd’hui',
+  'writings.l4':'Pourquoi on reste dans une relation qui fait mal',
+  'writings.l5':'À quoi ressemble une première séance',
+  'writings.all':'Tous les articles',
   'contact.kicker':'Contact',
   'contact.title':'Le premier pas tient en un message.',
   'contact.sub':'Écrivez-moi sur WhatsApp. Nous fixerons un moment pour parler, simplement.',
@@ -559,6 +606,14 @@ ar:{
   'about.photoAlt':'صورة يسري بندي عبد الله',
   'about.body':'<p>رجل أعمال، كوتش، ومعالج نفسي مختص في الصدمات النفسية.</p><p>مررتُ، مثل كثير من الناس، بتجارب حياتية صعبة علّمتني أن الألم قد يغيّر الإنسان، لكنه لا يحدد مستقبله. هذه التجارب لم تكن مجرد محطات في حياتي، بل كانت سببًا في شغفي بفهم النفس البشرية ومرافقة من يعيشون معاناة مشابهة.</p><p>وأرى أيضًا الوجه الآخر للقصة؛ عندما يفهم الإنسان ما يعيشه، ويجد المساحة الآمنة والدعم المناسب، يصبح التعافي ممكنًا، ويستعيد ثقته بنفسه، ويبدأ في كتابة فصل جديد من حياته.</p><p>رسالتي هي أن أساعد الناس على فهم أنفسهم، والتصالح مع ماضيهم، وبناء مستقبل لا تتحكم فيه جراح الأمس.</p><p class="closing">العلاج النفسي ليس علامة ضعف، بل هو فعل شجاعة، وخطوة نحو الحرية.</p>',
   'media.kicker':'في الإعلام',
+  'writings.kicker':'مقالات (بالفرنسية)',
+  'writings.title':'أن تفهم ما تعيشه.',
+  'writings.l1':'الصدمة النفسية: فهم ما يبقى بعدها',
+  'writings.l2':'التعلق العاطفي: كيف تتعرّف عليه وتتحرر منه',
+  'writings.l3':'سبع علامات على أن صدمة قديمة ما زالت تؤثر فيك',
+  'writings.l4':'لماذا نبقى في علاقة تؤلمنا',
+  'writings.l5':'كيف تجري الجلسة الأولى',
+  'writings.all':'كل المقالات',
   'contact.kicker':'تواصل',
   'contact.title':'الخطوة الأولى… رسالة.',
   'contact.sub':'راسلني على واتساب، ونتفق على موعد نتحدث فيه بهدوء.',
@@ -577,6 +632,14 @@ en:{
   'about.photoAlt':'Portrait of Yousri Bendiabdallah',
   'about.body':'<p>Entrepreneur, coach and psychotherapy practitioner, specialised in trauma.</p><p>Like many people, I have been through hard chapters. They taught me one thing: pain can change a person, but it does not decide their future. Those chapters are not footnotes in my life. They are the reason I do this work.</p><p>I also see the other side. When you understand what you are going through, and find a safe space and the right support, you get back on your feet. Confidence returns. A new chapter begins.</p><p>My mission: to help people understand themselves, make peace with the past, and build a future that old wounds no longer govern.</p><p class="closing">Therapy is not weakness. It is an act of courage. A step towards freedom.</p>',
   'media.kicker':'Seen and heard',
+  'writings.kicker':'Writing (in French)',
+  'writings.title':'Understanding what you are going through.',
+  'writings.l1':'Psychological trauma: understanding what stays',
+  'writings.l2':'Emotional dependency: recognising it, understanding it, leaving it',
+  'writings.l3':'Seven signs an old trauma is still at work today',
+  'writings.l4':'Why we stay in a relationship that hurts',
+  'writings.l5':'What a first session looks like',
+  'writings.all':'All articles',
   'contact.kicker':'Contact',
   'contact.title':'The first step fits in a message.',
   'contact.sub':'Write to me on WhatsApp. We will find a quiet moment to talk.',
