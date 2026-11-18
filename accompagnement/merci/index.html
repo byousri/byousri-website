@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paiement reçu | Yousri Bendiabdallah</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="/Logo%20transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/article.css">
+<style>
+  .thanks{padding-block:3.5rem 4rem}
+  .thanks .status{
+    display:inline-block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:600;padding:.35rem .8rem;margin-bottom:1.2rem;
+    background:rgba(83,50,85,.1);color:var(--plum);
+  }
+  .thanks .status.ok{background:#e3efe4;color:#24502b}
+  .thanks .cta{margin-top:1.8rem;cursor:pointer}
+  .thanks .ref{margin-top:1.4rem;font-size:.85rem;color:var(--muted);word-break:break-all}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="byousri — accueil">
+      <img src="/Logo%20transparent.png" alt="" width="128" height="128">
+      <span>Yousri Bendiabdallah</span>
+    </a>
+  </div>
+</header>
+
+<main class="wrap reading thanks">
+  <p class="status" id="status">Vérification du paiement…</p>
+  <h1 class="display">Merci, votre accompagnement commence.</h1>
+  <p class="standfirst">Dernière étape : envoyez-moi un message sur WhatsApp. Je vous transmets
+  l’accès à la formation et nous fixons ensemble votre première séance.</p>
+  <a class="cta" id="wa" href="https://wa.me/+212719597979">Prévenir Yousri sur WhatsApp</a>
+  <p class="ref" id="ref" hidden></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Yousri Bendiabdallah — Praticien en psychothérapie, Maroc</p>
+    <nav aria-label="Contact"><a href="https://wa.me/+212719597979">WhatsApp — 07 19 59 79 79</a></nav>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var q = new URLSearchParams(location.search);
+    var tx = q.get('transaction_id') || '';
+    var statusEl = document.getElementById('status');
+    var wa = document.getElementById('wa');
+    var ref = document.getElementById('ref');
+
+    var msg = 'Bonjour Yousri, je viens de régler l’accompagnement (4 900 DH).';
+    if (tx) {
+      msg += ' Référence de paiement : ' + tx;
+      ref.textContent = 'Référence de paiement : ' + tx;
+      ref.hidden = false;
+    }
+    wa.href = 'https://wa.me/+212719597979?text=' + encodeURIComponent(msg);
+
+    if (!tx) { statusEl.textContent = 'Paiement transmis'; return; }
+
+    fetch('/api/verifier-paiement?transaction_id=' + encodeURIComponent(tx))
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.paid) {
+          statusEl.textContent = '✓ Paiement confirmé';
+          statusEl.classList.add('ok');
+        } else {
+          statusEl.textContent = 'Paiement en cours de confirmation';
+        }
+      })
+      .catch(function () { statusEl.textContent = 'Paiement transmis'; });
+  })();
+</script>
+</body>
+</html>
