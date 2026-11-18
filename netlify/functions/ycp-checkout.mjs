@@ -15,7 +15,13 @@ export default async (req, context) => {
   }
 
   const site = siteUrl(req);
-  const fail = () => Response.redirect(`${site}/accompagnement/?paiement=erreur#paiement`, 303);
+  // Langue choisie sur la page (fr, ar ou en), reprise par YouCan Pay et au retour.
+  let lang = 'fr';
+  try {
+    const form = await req.formData();
+    if (['fr', 'ar', 'en'].includes(form.get('lang'))) lang = form.get('lang');
+  } catch {}
+  const fail = () => Response.redirect(`${site}/accompagnement/?lang=${lang}&paiement=erreur#paiement`, 303);
 
   const privateKey = process.env.YCP_PRIVATE_KEY;
   if (!privateKey) {
@@ -29,8 +35,10 @@ export default async (req, context) => {
     amount: String(OFFER.amount), // en centimes : 490000 = 4 900,00 MAD
     currency: OFFER.currency,
     customer_ip: context.ip || req.headers.get('x-nf-client-connection-ip') || '0.0.0.0',
-    success_url: `${site}/accompagnement/merci/`,
-    error_url: `${site}/accompagnement/?paiement=echec#paiement`,
+    // Langue dans le chemin (pas en paramètre) : YouCan Pay ajoute ses propres
+    // paramètres (transaction_id…) à ces adresses.
+    success_url: `${site}/accompagnement/merci/${lang}/`,
+    error_url: `${site}/accompagnement/echec/${lang}/`,
     'metadata[offre]': OFFER.label,
   });
   if (process.env.YCP_PUBLIC_KEY) body.set('pub_key', process.env.YCP_PUBLIC_KEY);
@@ -47,7 +55,7 @@ export default async (req, context) => {
       console.error('Tokenize YouCan Pay refusé', res.status, JSON.stringify(data));
       return fail();
     }
-    return Response.redirect(`${ycpBase()}/payment-form/${tokenId}?lang=fr`, 303);
+    return Response.redirect(`${ycpBase()}/payment-form/${tokenId}?lang=${lang}`, 303);
   } catch (err) {
     console.error('Erreur réseau YouCan Pay', err);
     return fail();

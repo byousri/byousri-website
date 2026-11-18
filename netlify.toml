@@ -36,3 +36,24 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Retours de YouCan Pay : la langue est dans le chemin, la page la lit elle-même.
+[[redirects]]
+  from = "/accompagnement/merci/:lang"
+  to = "/accompagnement/merci/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/accompagnement/merci/:lang/*"
+  to = "/accompagnement/merci/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/accompagnement/echec/:lang"
+  to = "/accompagnement/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/accompagnement/echec/:lang/*"
+  to = "/accompagnement/index.html"
+  status = 200

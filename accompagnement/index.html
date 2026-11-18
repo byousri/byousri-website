@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>L’accompagnement trauma | Yousri Bendiabdallah</title>
-<meta name="description" content="Un accompagnement complet pour comprendre et traiter vos traumatismes : une formation de 4 heures, 5 heures de thérapie et un suivi WhatsApp avec réponse sous 24 h. 4 900 dirhams.">
+<meta name="description" content="Formation de 4 h, 5 heures de thérapie et suivi WhatsApp sous 24 h. 4 900 dirhams. — تكوين 4 ساعات، 5 ساعات علاج ومتابعة عبر واتساب. — 4-hour course, 5 hours of therapy and WhatsApp follow-up.">
 <!-- Page envoyée personnellement aux patients après un premier échange :
-     elle n'est pas indexée par les moteurs de recherche. -->
+     elle n'est pas indexée par les moteurs de recherche.
+     Langue : ?lang=fr (défaut), ?lang=ar ou ?lang=en -->
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://byousri.com/accompagnement/">
 <meta name="author" content="Yousri Bendiabdallah">
@@ -14,22 +15,32 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://byousri.com/accompagnement/">
 <meta property="og:title" content="L’accompagnement trauma — Yousri Bendiabdallah">
-<meta property="og:description" content="Formation de 4 h, 5 heures de thérapie et suivi WhatsApp sous 24 h. 4 900 dirhams.">
+<meta property="og:description" content="Formation 4 h · 5 h de thérapie · WhatsApp sous 24 h — 4 900 DH">
 <meta property="og:image" content="https://byousri.com/Share.png">
-<meta property="og:locale" content="fr_MA">
 <meta property="og:site_name" content="Yousri Bendiabdallah">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" type="image/png" href="/Logo%20transparent.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Noto+Kufi+Arabic:wght@500;700&family=Noto+Naskh+Arabic:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/article.css">
 
 <style>
   /* Styles propres à la page de l'accompagnement. */
-  .offer-head{padding-block:2.5rem 1.5rem}
+  .offer-head{padding-block:2rem 1.5rem}
   .offer-head .standfirst{margin-bottom:0}
+
+  /* ---------- sélecteur de langue ---------- */
+  .lang-switch{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.8rem}
+  .lang-switch button{
+    font:inherit;font-size:.88rem;cursor:pointer;
+    background:transparent;color:var(--ink);
+    border:1px solid var(--line);padding:.35rem .85rem;
+  }
+  .lang-switch button[aria-pressed="true"]{background:var(--ink);color:var(--chalk);border-color:var(--ink)}
+  .lang-switch button:hover{border-color:var(--plum)}
+  .lang-switch [lang="ar"]{font-family:"Noto Kufi Arabic", sans-serif}
 
   .pillars{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1.25rem}
   .pillar{
@@ -53,7 +64,7 @@
     margin:0;
   }
   .pillar p{margin:.35rem 0 0;color:var(--muted)}
-  .pillar ul{margin:.7rem 0 0 1.2rem;color:var(--ink)}
+  .pillar ul{margin-block:.7rem 0;margin-inline:1.2rem 0;color:var(--ink)}
   .pillar li{margin-bottom:.35rem}
 
   .price-card{
@@ -71,34 +82,46 @@
     display:flex;justify-content:space-between;gap:1rem;
     padding:.7rem 0;border-bottom:1px solid rgba(245,241,232,.18);font-size:.98rem;
   }
-  .recap li span:last-child{font-weight:700;text-align:right}
+  .recap li span:last-child{font-weight:700;text-align:end}
   .price-card .actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
   .price-card .cta{font-size:1.05rem}
   .cta.ghost{background:transparent;border-color:rgba(245,241,232,.5);color:var(--chalk)}
   .cta.ghost:hover{background:var(--chalk);color:var(--ink);border-color:var(--chalk)}
+  .nowrap{white-space:nowrap}
   .secure{margin-top:1.1rem;font-size:.85rem;opacity:.7}
   .price-card form{margin:0}
   .price-card button.cta{cursor:pointer}
   .price-card button.cta:disabled{opacity:.7;cursor:wait}
   .pay-alert{
-    background:rgba(245,241,232,.1);border-left:3px solid #e0a3a3;
+    background:rgba(245,241,232,.1);border-inline-start:3px solid #e0a3a3;
     padding:.8rem 1rem;margin:0 0 1.3rem;font-size:.95rem;
   }
 
   .steps{counter-reset:step;list-style:none;margin:1.2rem 0 0;padding:0}
   .steps li{counter-increment:step;position:relative;padding-inline-start:2.6rem;margin-bottom:1rem}
   .steps li::before{
-    content:counter(step);position:absolute;left:0;top:.05rem;
+    content:counter(step);position:absolute;inset-inline-start:0;top:.05rem;
     width:1.8rem;height:1.8rem;border-radius:50%;
     background:var(--plum);color:var(--chalk);font-weight:700;font-size:.9rem;
     display:grid;place-items:center;line-height:1;
   }
 
+  /* ---------- arabe (droite à gauche) ---------- */
+  html[lang="ar"] body{font-family:"Noto Naskh Arabic", serif;font-size:1.12rem;line-height:1.9}
+  html[lang="ar"] .display,
+  html[lang="ar"] h2,
+  html[lang="ar"] .pillar h2,
+  html[lang="ar"] .cta,
+  html[lang="ar"] .price small{font-family:"Noto Kufi Arabic", sans-serif;letter-spacing:0;line-height:1.5}
+  html[lang="ar"] .kicker,
+  html[lang="ar"] .pillar .tag{letter-spacing:0;font-family:"Noto Kufi Arabic", sans-serif}
+  html[lang="ar"] .callout{border-inline-start-width:1px}
+
   @media (max-width:30rem){
     .pillar{grid-template-columns:1fr}
     .pillar .num{grid-row:auto;font-size:2.1rem;margin-bottom:.3rem}
     .recap li{flex-direction:column;gap:.1rem}
-    .recap li span:last-child{text-align:left}
+    .recap li span:last-child{text-align:start}
     .price-card .cta,.price-card form{width:100%;text-align:center}
   }
 </style>
@@ -107,23 +130,23 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="byousri — accueil">
+    <a class="brand" href="/" aria-label="byousri">
       <img src="/Logo%20transparent.png" alt="" width="128" height="128">
       <span>Yousri Bendiabdallah</span>
     </a>
-    <nav class="site-nav" aria-label="Navigation principale">
-      <a href="/">Accueil</a>
-      <a href="/traumas/">Traumas</a>
-      <a href="/dependance-affective/">Dépendance affective</a>
-      <a href="/articles/">Articles</a>
-    </nav>
   </div>
 </header>
 
 <div class="wrap reading offer-head">
-  <p class="kicker">Votre accompagnement</p>
-  <h1 class="display">Comprendre vos traumatismes, et vous en libérer</h1>
-  <p class="standfirst">Suite à notre échange, voici le détail de l’accompagnement que je vous propose.
+  <div class="lang-switch" role="group" aria-label="Langue / اللغة / Language">
+    <button type="button" data-lang="fr" lang="fr" aria-pressed="true">Français</button>
+    <button type="button" data-lang="ar" lang="ar" aria-pressed="false">العربية</button>
+    <button type="button" data-lang="en" lang="en" aria-pressed="false">English</button>
+  </div>
+
+  <p class="kicker" data-i18n="kicker">Votre accompagnement</p>
+  <h1 class="display" data-i18n="title">Comprendre vos traumatismes, et vous en libérer</h1>
+  <p class="standfirst" data-i18n="intro">Suite à notre échange, voici le détail de l’accompagnement que je vous propose.
   Il réunit trois éléments : comprendre, traiter, et ne pas rester seul entre les séances.</p>
 </div>
 
@@ -133,27 +156,27 @@
 <ol class="pillars">
   <li class="pillar">
     <span class="num" aria-hidden="true">01</span>
-    <span class="tag">Formation · 4 heures</span>
-    <h2>Comprendre le fonctionnement interne du trauma</h2>
+    <span class="tag" data-i18n="p1_tag">Formation · 4 heures</span>
+    <h2 data-i18n="p1_title">Comprendre le fonctionnement interne du trauma</h2>
     <div>
-      <p>Une formation de 4 heures pour comprendre ce qui se passe en vous :
+      <p data-i18n="p1_text">Une formation de 4 heures pour comprendre ce qui se passe en vous :
       pourquoi certaines réactions reviennent, pourquoi le temps seul ne suffit pas,
       et comment le trauma continue d’agir dans le corps, les émotions et les relations.</p>
       <ul>
-        <li>Ce qu’est réellement un trauma, et comment il s’installe</li>
-        <li>Le rôle du système nerveux et du corps</li>
-        <li>Pourquoi on revit, on évite ou on se coupe</li>
-        <li>Ce qui permet, concrètement, d’en sortir</li>
+        <li data-i18n="p1_l1">Ce qu’est réellement un trauma, et comment il s’installe</li>
+        <li data-i18n="p1_l2">Le rôle du système nerveux et du corps</li>
+        <li data-i18n="p1_l3">Pourquoi on revit, on évite ou on se coupe</li>
+        <li data-i18n="p1_l4">Ce qui permet, concrètement, d’en sortir</li>
       </ul>
     </div>
   </li>
 
   <li class="pillar">
     <span class="num" aria-hidden="true">02</span>
-    <span class="tag">Thérapie · 5 heures</span>
-    <h2>Cinq heures de thérapie individuelle</h2>
+    <span class="tag" data-i18n="p2_tag">Thérapie · 5 heures</span>
+    <h2 data-i18n="p2_title">Cinq heures de thérapie individuelle</h2>
     <div>
-      <p>Cinq heures de séances en tête-à-tête avec moi, en français ou en arabe,
+      <p data-i18n="p2_text">Cinq heures de séances en tête-à-tête avec moi, en français ou en arabe,
       au cabinet ou à distance. On y travaille directement sur votre histoire,
       à votre rythme, sans jamais vous forcer à raconter plus que ce que vous souhaitez.</p>
     </div>
@@ -161,10 +184,10 @@
 
   <li class="pillar">
     <span class="num" aria-hidden="true">03</span>
-    <span class="tag">Suivi WhatsApp</span>
-    <h2>Un accès direct à moi, pendant tout l’accompagnement</h2>
+    <span class="tag" data-i18n="p3_tag">Suivi WhatsApp</span>
+    <h2 data-i18n="p3_title">Un accès direct à moi, pendant tout l’accompagnement</h2>
     <div>
-      <p>Pendant toute la durée de l’accompagnement, vous pouvez m’écrire sur WhatsApp.
+      <p data-i18n="p3_text">Pendant toute la durée de l’accompagnement, vous pouvez m’écrire sur WhatsApp.
       Je vous réponds <strong>dans les 24 heures au maximum</strong>. Une question,
       une réaction qui vous inquiète, un moment difficile : vous n’attendez pas la
       prochaine séance pour être entendu.</p>
@@ -173,35 +196,36 @@
 </ol>
 
 <section class="price-card" id="paiement" aria-labelledby="prix-titre">
-  <p class="kicker" id="prix-titre">Tarif de l’accompagnement</p>
-  <p class="price">4 900<small>dirhams</small></p>
+  <p class="kicker" id="prix-titre" data-i18n="price_kicker">Tarif de l’accompagnement</p>
+  <p class="price"><bdi dir="ltr" class="nowrap">4 900</bdi><small data-i18n="currency">dirhams</small></p>
   <ul class="recap">
-    <li><span>Formation : comprendre le trauma</span><span>4 heures</span></li>
-    <li><span>Thérapie individuelle</span><span>5 heures</span></li>
-    <li><span>Suivi WhatsApp</span><span>Réponse sous 24 h</span></li>
+    <li><span data-i18n="r1_l">Formation : comprendre le trauma</span><span data-i18n="r1_v">4 heures</span></li>
+    <li><span data-i18n="r2_l">Thérapie individuelle</span><span data-i18n="r2_v">5 heures</span></li>
+    <li><span data-i18n="r3_l">Suivi WhatsApp</span><span data-i18n="r3_v">Réponse sous 24 h</span></li>
   </ul>
   <p class="pay-alert" id="pay-alert" role="alert" hidden></p>
   <div class="actions">
     <!-- Le paiement est créé côté serveur (netlify/functions/ycp-checkout.mjs),
          puis le patient est redirigé vers la page sécurisée YouCan Pay. -->
     <form method="post" action="/api/paiement-accompagnement" id="pay-form">
-      <button class="cta" type="submit">Payer 4 900 DH en ligne</button>
+      <input type="hidden" name="lang" id="pay-lang" value="fr">
+      <button class="cta" type="submit" data-i18n="pay_btn">Payer 4 900 DH en ligne</button>
     </form>
-    <a class="cta ghost" href="https://wa.me/+212719597979?text=Bonjour%20Yousri%2C%20j%E2%80%99ai%20une%20question%20sur%20l%E2%80%99accompagnement.">Une question ? WhatsApp</a>
+    <a class="cta ghost" id="wa-question" href="https://wa.me/+212719597979" data-i18n="question_btn">Une question ? WhatsApp</a>
   </div>
-  <p class="secure">Paiement sécurisé par carte bancaire via YouCan Pay.</p>
+  <p class="secure" data-i18n="secure">Paiement sécurisé par carte bancaire via YouCan Pay.</p>
 </section>
 
-<h2>Comment ça se passe</h2>
+<h2 data-i18n="steps_title">Comment ça se passe</h2>
 <ol class="steps">
-  <li>Vous réglez l’accompagnement en ligne, par carte, via le bouton ci-dessus.</li>
-  <li>Une fois le paiement validé, vous m’envoyez un message WhatsApp depuis la page de confirmation.</li>
-  <li>Je vous transmets l’accès à la formation et nous fixons ensemble la première séance.</li>
+  <li data-i18n="s1">Vous réglez l’accompagnement en ligne, par carte, via le bouton ci-dessus.</li>
+  <li data-i18n="s2">Une fois le paiement validé, vous m’envoyez un message WhatsApp depuis la page de confirmation.</li>
+  <li data-i18n="s3">Je vous transmets l’accès à la formation et nous fixons ensemble la première séance.</li>
 </ol>
 
 <div class="callout">
-  <p class="callout-title">Vous préférez payer autrement ?</p>
-  <p>Écrivez-moi sur <a href="https://wa.me/+212719597979">WhatsApp au 07 19 59 79 79</a>,
+  <p class="callout-title" data-i18n="alt_title">Vous préférez payer autrement ?</p>
+  <p data-i18n="alt_text">Écrivez-moi sur <a href="https://wa.me/+212719597979">WhatsApp au 07 19 59 79 79</a>,
   nous trouverons la solution qui vous convient.</p>
 </div>
 
@@ -211,15 +235,7 @@
 <footer>
   <div class="wrap">
     <div>
-      <p>© 2026 Yousri Bendiabdallah — Praticien en psychothérapie, Maroc</p>
-      <details class="legal">
-        <summary>Mentions légales &amp; confidentialité</summary>
-        <p>Site édité par Yousri Bendiabdallah. Le paiement en ligne est traité par
-        YouCan Pay ; aucune donnée bancaire ne transite par ce site. Les contenus publiés
-        ici sont informatifs et ne remplacent ni un diagnostic ni un avis médical. En cas
-        d’urgence, contactez les services de secours : 141 (SAMU), 150 (protection civile),
-        190 (police).</p>
-      </details>
+      <p data-i18n="footer">© 2026 Yousri Bendiabdallah — Praticien en psychothérapie, Maroc</p>
     </div>
     <nav aria-label="Réseaux sociaux">
       <a href="https://www.instagram.com/byousri/" target="_blank" rel="noopener">Instagram</a>
@@ -231,24 +247,166 @@
 </footer>
 
 <script>
-  (function () {
-    // Message en retour de YouCan Pay (paiement refusé ou erreur technique).
-    var status = new URLSearchParams(location.search).get('paiement');
-    var alertBox = document.getElementById('pay-alert');
-    if (status && alertBox) {
-      alertBox.textContent = status === 'echec'
-        ? 'Le paiement n’a pas abouti et aucun montant n’a été débité. Vous pouvez réessayer, ou m’écrire sur WhatsApp.'
-        : 'Le paiement en ligne est momentanément indisponible. Écrivez-moi sur WhatsApp, je vous envoie un autre moyen de règlement.';
-      alertBox.hidden = false;
+(function () {
+  var WA = 'https://wa.me/+212719597979';
+  var T = {
+    fr: {
+      _title: 'L’accompagnement trauma | Yousri Bendiabdallah',
+      _wa_question: 'Bonjour Yousri, j’ai une question sur l’accompagnement.',
+      _err_echec: 'Le paiement n’a pas abouti et aucun montant n’a été débité. Vous pouvez réessayer, ou m’écrire sur WhatsApp.',
+      _err_erreur: 'Le paiement en ligne est momentanément indisponible. Écrivez-moi sur WhatsApp, je vous envoie un autre moyen de règlement.',
+      _redirect: 'Redirection vers le paiement…'
+    },
+    ar: {
+      _title: 'مرافقة علاج الصدمات | يسري بنديبدالله',
+      _wa_question: 'السلام عليكم يسري، عندي سؤال حول المرافقة.',
+      _err_echec: 'لم تتم عملية الدفع ولم يتم خصم أي مبلغ. يمكنكم المحاولة مرة أخرى، أو مراسلتي عبر واتساب.',
+      _err_erreur: 'الدفع الإلكتروني غير متاح مؤقتاً. راسلوني عبر واتساب وسأرسل لكم طريقة أخرى للدفع.',
+      _redirect: 'جارٍ التحويل إلى صفحة الدفع…',
+      kicker: 'مرافقتك',
+      title: 'افهم صدماتك، وتحرّر منها',
+      intro: 'بعد حديثنا، إليك تفاصيل المرافقة التي أقترحها عليك. وهي تجمع ثلاثة عناصر: أن تفهم، أن تعالج، وألا تبقى وحيداً بين الجلسات.',
+      p1_tag: 'تكوين · 4 ساعات',
+      p1_title: 'فهم كيف تعمل الصدمة من الداخل',
+      p1_text: 'تكوين مدته 4 ساعات لتفهم ما يحدث بداخلك: لماذا تتكرر بعض ردود الفعل، ولماذا لا يكفي الوقت وحده، وكيف تستمر الصدمة في التأثير على الجسد والمشاعر والعلاقات.',
+      p1_l1: 'ما هي الصدمة حقاً، وكيف تترسخ',
+      p1_l2: 'دور الجهاز العصبي والجسد',
+      p1_l3: 'لماذا نعيش الموقف من جديد، أو نتجنّب، أو ننفصل عن أنفسنا',
+      p1_l4: 'ما الذي يساعد فعلياً على الخروج منها',
+      p2_tag: 'علاج · 5 ساعات',
+      p2_title: 'خمس ساعات من العلاج الفردي',
+      p2_text: 'خمس ساعات من الجلسات الفردية معي، بالعربية أو بالفرنسية، في العيادة أو عن بُعد. نشتغل فيها مباشرة على قصتك، بالإيقاع الذي يناسبك، دون أن أطلب منك أبداً أن تحكي أكثر مما تريد.',
+      p3_tag: 'متابعة عبر واتساب',
+      p3_title: 'تواصل مباشر معي طوال مدة المرافقة',
+      p3_text: 'طوال مدة المرافقة، يمكنك مراسلتي عبر واتساب، وأجيبك <strong>في أجل أقصاه 24 ساعة</strong>. سؤال، رد فعل يقلقك، لحظة صعبة: لن تنتظر الجلسة القادمة ليُسمع صوتك.',
+      price_kicker: 'ثمن المرافقة',
+      currency: 'درهم',
+      r1_l: 'تكوين: فهم الصدمة', r1_v: '4 ساعات',
+      r2_l: 'علاج فردي', r2_v: '5 ساعات',
+      r3_l: 'متابعة عبر واتساب', r3_v: 'رد خلال 24 ساعة',
+      pay_btn: 'ادفع 4900 درهم عبر الإنترنت',
+      question_btn: 'سؤال؟ واتساب',
+      secure: 'دفع آمن بالبطاقة البنكية عبر YouCan Pay.',
+      steps_title: 'كيف تتم العملية',
+      s1: 'تدفع ثمن المرافقة عبر الإنترنت بالبطاقة البنكية، من خلال الزر أعلاه.',
+      s2: 'بعد تأكيد الدفع، ترسل لي رسالة عبر واتساب من صفحة التأكيد.',
+      s3: 'أرسل لك رابط الولوج إلى التكوين، ونحدد معاً موعد الجلسة الأولى.',
+      alt_title: 'تفضّل طريقة دفع أخرى؟',
+      alt_text: 'راسلني عبر <a href="' + WA + '">واتساب على الرقم <bdi dir="ltr" class="nowrap">07 19 59 79 79</bdi></a>، وسنجد الحل الذي يناسبك.',
+      footer: '© 2026 يسري بنديبدالله — ممارس في العلاج النفسي، المغرب'
+    },
+    en: {
+      _title: 'Trauma programme | Yousri Bendiabdallah',
+      _wa_question: 'Hello Yousri, I have a question about the programme.',
+      _err_echec: 'The payment did not go through and nothing was charged. You can try again, or message me on WhatsApp.',
+      _err_erreur: 'Online payment is temporarily unavailable. Message me on WhatsApp and I will send you another way to pay.',
+      _redirect: 'Redirecting to payment…',
+      kicker: 'Your programme',
+      title: 'Understand your trauma, and free yourself from it',
+      intro: 'Following our conversation, here are the details of the programme I am offering you. It brings together three things: understanding, healing, and not being alone between sessions.',
+      p1_tag: 'Course · 4 hours',
+      p1_title: 'Understanding how trauma works from the inside',
+      p1_text: 'A 4-hour course to understand what is happening inside you: why certain reactions keep coming back, why time alone is not enough, and how trauma keeps acting on the body, emotions and relationships.',
+      p1_l1: 'What trauma really is, and how it takes hold',
+      p1_l2: 'The role of the nervous system and the body',
+      p1_l3: 'Why we relive, avoid or shut down',
+      p1_l4: 'What concretely helps you move beyond it',
+      p2_tag: 'Therapy · 5 hours',
+      p2_title: 'Five hours of one-to-one therapy',
+      p2_text: 'Five hours of one-to-one sessions with me, in French or Arabic, in person or online. We work directly on your story, at your own pace, without ever pushing you to share more than you want to.',
+      p3_tag: 'WhatsApp follow-up',
+      p3_title: 'Direct access to me throughout the programme',
+      p3_text: 'For the whole duration of the programme, you can message me on WhatsApp. I reply <strong>within 24 hours at most</strong>. A question, a reaction that worries you, a hard moment: you don’t have to wait for the next session to be heard.',
+      price_kicker: 'Programme fee',
+      currency: 'dirhams',
+      r1_l: 'Course: understanding trauma', r1_v: '4 hours',
+      r2_l: 'One-to-one therapy', r2_v: '5 hours',
+      r3_l: 'WhatsApp follow-up', r3_v: 'Reply within 24 h',
+      pay_btn: 'Pay 4,900 MAD online',
+      question_btn: 'A question? WhatsApp',
+      secure: 'Secure card payment via YouCan Pay.',
+      steps_title: 'How it works',
+      s1: 'You pay for the programme online, by card, using the button above.',
+      s2: 'Once the payment is confirmed, you send me a WhatsApp message from the confirmation page.',
+      s3: 'I send you access to the course and we schedule your first session together.',
+      alt_title: 'Prefer another way to pay?',
+      alt_text: 'Message me on <a href="' + WA + '">WhatsApp at +212 7 19 59 79 79</a> and we will find what works for you.',
+      footer: '© 2026 Yousri Bendiabdallah — Psychotherapy practitioner, Morocco'
     }
-    // Empêche un double clic de créer deux paiements.
-    var form = document.getElementById('pay-form');
-    if (form) form.addEventListener('submit', function () {
-      var b = form.querySelector('button');
-      b.disabled = true;
-      b.textContent = 'Redirection vers le paiement…';
+  };
+
+  // Le français est déjà dans le HTML : on le mémorise pour pouvoir y revenir.
+  var nodes = document.querySelectorAll('[data-i18n]');
+  nodes.forEach(function (el) { T.fr[el.dataset.i18n] = el.innerHTML; });
+
+  // Retour d'échec YouCan Pay : /accompagnement/echec/<langue>/
+  var failPath = location.pathname.match(/\/accompagnement\/echec\/(fr|ar|en)/);
+
+  function pick() {
+    var q = new URLSearchParams(location.search).get('lang');
+    if (T[q]) return q;
+    if (failPath) return failPath[1];
+    try { var s = localStorage.getItem('acc-lang'); if (T[s]) return s; } catch (e) {}
+    var n = (navigator.language || '').slice(0, 2);
+    return n === 'ar' ? 'ar' : n === 'en' ? 'en' : 'fr';
+  }
+
+  var current = 'fr';
+  function apply(lang) {
+    current = lang;
+    var d = T[lang];
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.title = d._title;
+    nodes.forEach(function (el) { var v = d[el.dataset.i18n]; if (v != null) el.innerHTML = v; });
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
     });
-  })();
+    document.getElementById('pay-lang').value = lang;
+    document.getElementById('wa-question').href = WA + '?text=' + encodeURIComponent(d._wa_question);
+    showAlert();
+    try { localStorage.setItem('acc-lang', lang); } catch (e) {}
+    // L'adresse reflète la langue : vous pouvez copier le lien et l'envoyer tel quel.
+    var u = new URL(location.href);
+    if (failPath) u.pathname = '/accompagnement/';
+    u.searchParams.set('lang', lang);
+    u.searchParams.delete('transaction_id');
+    if (failPath) u.searchParams.set('paiement', 'echec');
+    history.replaceState(null, '', u);
+    failPath = null;
+  }
+
+  function showAlert() {
+    var status = new URLSearchParams(location.search).get('paiement') || (failPath && 'echec');
+    var box = document.getElementById('pay-alert');
+    if (!status) return;
+    box.textContent = status === 'echec' ? T[current]._err_echec : T[current]._err_erreur;
+    if (box.hidden) {
+      box.hidden = false;
+      document.getElementById('paiement').scrollIntoView();
+    }
+  }
+
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.dataset.lang); });
+  });
+
+  // Empêche un double clic de créer deux paiements.
+  var form = document.getElementById('pay-form');
+  form.addEventListener('submit', function () {
+    var b = form.querySelector('button');
+    b.disabled = true;
+    b.textContent = T[current]._redirect;
+  });
+  // Retour arrière depuis YouCan Pay : réactive le bouton.
+  window.addEventListener('pageshow', function () {
+    var b = form.querySelector('button');
+    b.disabled = false;
+    b.innerHTML = T[current].pay_btn;
+  });
+
+  apply(pick());
+})();
 </script>
 </body>
 </html>

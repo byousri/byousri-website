@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="/Logo%20transparent.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Noto+Kufi+Arabic:wght@500;700&family=Noto+Naskh+Arabic:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/article.css">
 <style>
   .thanks{padding-block:3.5rem 4rem}
@@ -20,13 +20,16 @@
   .thanks .status.ok{background:#e3efe4;color:#24502b}
   .thanks .cta{margin-top:1.8rem;cursor:pointer}
   .thanks .ref{margin-top:1.4rem;font-size:.85rem;color:var(--muted);word-break:break-all}
+  html[lang="ar"] body{font-family:"Noto Naskh Arabic", serif;font-size:1.12rem;line-height:1.9}
+  html[lang="ar"] .display,html[lang="ar"] .cta,html[lang="ar"] .status{
+    font-family:"Noto Kufi Arabic", sans-serif;letter-spacing:0;line-height:1.5}
 </style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="byousri — accueil">
+    <a class="brand" href="/" aria-label="byousri">
       <img src="/Logo%20transparent.png" alt="" width="128" height="128">
       <span>Yousri Bendiabdallah</span>
     </a>
@@ -34,9 +37,9 @@
 </header>
 
 <main class="wrap reading thanks">
-  <p class="status" id="status">Vérification du paiement…</p>
-  <h1 class="display">Merci, votre accompagnement commence.</h1>
-  <p class="standfirst">Dernière étape : envoyez-moi un message sur WhatsApp. Je vous transmets
+  <p class="status" id="status"></p>
+  <h1 class="display" id="title">Merci, votre accompagnement commence.</h1>
+  <p class="standfirst" id="text">Dernière étape : envoyez-moi un message sur WhatsApp. Je vous transmets
   l’accès à la formation et nous fixons ensemble votre première séance.</p>
   <a class="cta" id="wa" href="https://wa.me/+212719597979">Prévenir Yousri sur WhatsApp</a>
   <p class="ref" id="ref" hidden></p>
@@ -44,41 +47,82 @@
 
 <footer>
   <div class="wrap">
-    <p>© 2026 Yousri Bendiabdallah — Praticien en psychothérapie, Maroc</p>
-    <nav aria-label="Contact"><a href="https://wa.me/+212719597979">WhatsApp — 07 19 59 79 79</a></nav>
+    <p id="footer">© 2026 Yousri Bendiabdallah — Praticien en psychothérapie, Maroc</p>
+    <nav aria-label="WhatsApp"><a href="https://wa.me/+212719597979" dir="ltr">WhatsApp — 07 19 59 79 79</a></nav>
   </div>
 </footer>
 
 <script>
-  (function () {
-    var q = new URLSearchParams(location.search);
-    var tx = q.get('transaction_id') || '';
-    var statusEl = document.getElementById('status');
-    var wa = document.getElementById('wa');
-    var ref = document.getElementById('ref');
-
-    var msg = 'Bonjour Yousri, je viens de régler l’accompagnement (4 900 DH).';
-    if (tx) {
-      msg += ' Référence de paiement : ' + tx;
-      ref.textContent = 'Référence de paiement : ' + tx;
-      ref.hidden = false;
+(function () {
+  var T = {
+    fr: {
+      doc: 'Paiement reçu | Yousri Bendiabdallah',
+      checking: 'Vérification du paiement…', ok: '✓ Paiement confirmé',
+      pending: 'Paiement en cours de confirmation', sent: 'Paiement transmis',
+      title: 'Merci, votre accompagnement commence.',
+      text: 'Dernière étape : envoyez-moi un message sur WhatsApp. Je vous transmets l’accès à la formation et nous fixons ensemble votre première séance.',
+      btn: 'Prévenir Yousri sur WhatsApp', ref: 'Référence de paiement : ',
+      wa: 'Bonjour Yousri, je viens de régler l’accompagnement (4 900 DH).',
+      footer: '© 2026 Yousri Bendiabdallah — Praticien en psychothérapie, Maroc'
+    },
+    ar: {
+      doc: 'تم استلام الدفع | يسري بنديبدالله',
+      checking: 'جارٍ التحقق من الدفع…', ok: '✓ تم تأكيد الدفع',
+      pending: 'الدفع في طور التأكيد', sent: 'تم إرسال الدفع',
+      title: 'شكراً لك، مرافقتك تبدأ الآن.',
+      text: 'الخطوة الأخيرة: أرسل لي رسالة عبر واتساب. سأرسل لك رابط الولوج إلى التكوين، ونحدد معاً موعد جلستك الأولى.',
+      btn: 'أخبر يسري عبر واتساب', ref: 'مرجع الدفع: ',
+      wa: 'السلام عليكم يسري، لقد دفعت للتو ثمن المرافقة (4900 درهم).',
+      footer: '© 2026 يسري بنديبدالله — ممارس في العلاج النفسي، المغرب'
+    },
+    en: {
+      doc: 'Payment received | Yousri Bendiabdallah',
+      checking: 'Checking payment…', ok: '✓ Payment confirmed',
+      pending: 'Payment being confirmed', sent: 'Payment submitted',
+      title: 'Thank you, your programme begins.',
+      text: 'Last step: send me a message on WhatsApp. I will send you access to the course and we will schedule your first session together.',
+      btn: 'Let Yousri know on WhatsApp', ref: 'Payment reference: ',
+      wa: 'Hello Yousri, I have just paid for the programme (4,900 MAD).',
+      footer: '© 2026 Yousri Bendiabdallah — Psychotherapy practitioner, Morocco'
     }
-    wa.href = 'https://wa.me/+212719597979?text=' + encodeURIComponent(msg);
+  };
 
-    if (!tx) { statusEl.textContent = 'Paiement transmis'; return; }
+  // Langue : /accompagnement/merci/<langue>/ (retour YouCan Pay) ou ?lang=
+  var q = new URLSearchParams(location.search);
+  var m = location.pathname.match(/\/merci\/(fr|ar|en)/);
+  var lang = (m && m[1]) || (T[q.get('lang')] ? q.get('lang') : 'fr');
+  var d = T[lang];
+  var $ = function (id) { return document.getElementById(id); };
 
-    fetch('/api/verifier-paiement?transaction_id=' + encodeURIComponent(tx))
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        if (d.paid) {
-          statusEl.textContent = '✓ Paiement confirmé';
-          statusEl.classList.add('ok');
-        } else {
-          statusEl.textContent = 'Paiement en cours de confirmation';
-        }
-      })
-      .catch(function () { statusEl.textContent = 'Paiement transmis'; });
-  })();
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.title = d.doc;
+  $('title').textContent = d.title;
+  $('text').textContent = d.text;
+  $('wa').textContent = d.btn;
+  $('footer').textContent = d.footer;
+
+  var tx = q.get('transaction_id') || '';
+  var msg = d.wa;
+  if (tx) {
+    msg += ' ' + d.ref + tx;
+    $('ref').textContent = d.ref + tx;
+    $('ref').hidden = false;
+  }
+  $('wa').href = 'https://wa.me/+212719597979?text=' + encodeURIComponent(msg);
+
+  var statusEl = $('status');
+  if (!tx) { statusEl.textContent = d.sent; return; }
+  statusEl.textContent = d.checking;
+
+  fetch('/api/verifier-paiement?transaction_id=' + encodeURIComponent(tx))
+    .then(function (r) { return r.json(); })
+    .then(function (res) {
+      if (res.paid) { statusEl.textContent = d.ok; statusEl.classList.add('ok'); }
+      else statusEl.textContent = d.pending;
+    })
+    .catch(function () { statusEl.textContent = d.sent; });
+})();
 </script>
 </body>
 </html>
