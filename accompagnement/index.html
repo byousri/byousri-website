@@ -370,7 +370,9 @@
     var u = new URL(location.href);
     if (failPath) u.pathname = '/accompagnement/';
     u.searchParams.set('lang', lang);
-    u.searchParams.delete('transaction_id');
+    // Paramètres ajoutés par YouCan Pay au retour : inutiles une fois lus.
+    ['transaction_id', 'is_success', 'success', 'order_id', 'message', 'code']
+      .forEach(function (k) { u.searchParams.delete(k); });
     if (failPath) u.searchParams.set('paiement', 'echec');
     history.replaceState(null, '', u);
     failPath = null;
