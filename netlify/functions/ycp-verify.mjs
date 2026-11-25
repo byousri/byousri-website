@@ -6,7 +6,7 @@
 //  - /api/v2/transactions/{id}          (API v2, clés live uniquement, auth Basic)
 // On essaie la première, puis la v2 en production si besoin.
 
-import { OFFER, ycpBase } from '../lib/ycp.mjs';
+import { OFFERS, CURRENCY, productFromOrderId, ycpBase } from '../lib/ycp.mjs';
 
 const json = (obj, status = 200) =>
   new Response(JSON.stringify(obj), {
@@ -40,7 +40,7 @@ function amountInCentimes(t) {
 }
 
 function currencyOf(t) {
-  return String((t.amount && t.amount.currency) || t.currency || OFFER.currency).toUpperCase();
+  return String((t.amount && t.amount.currency) || t.currency || CURRENCY).toUpperCase();
 }
 
 export default async (req) => {
@@ -54,13 +54,16 @@ export default async (req) => {
     const t = await fetchTransaction(id, privateKey);
     if (!t) return json({ paid: false, reason: 'not_found' }, 404);
 
-    // Payée : statut 1 (ancienne API) ou "paid" (v2).
+    // Payée : statut 1 (ancienne API) ou "paid" (v2), et montant conforme
+    // au prix de la formule indiquée dans l'identifiant de commande.
+    const product = productFromOrderId(t.order_id);
     const paid =
+      product !== null &&
       (String(t.status) === '1' || String(t.status).toLowerCase() === 'paid') &&
-      amountInCentimes(t) === OFFER.amount &&
-      currencyOf(t) === OFFER.currency;
+      amountInCentimes(t) === OFFERS[product].amount &&
+      currencyOf(t) === CURRENCY;
 
-    return json({ paid, order_id: t.order_id || null });
+    return json({ paid, product, order_id: t.order_id || null });
   } catch (err) {
     console.error('Vérification YouCan Pay impossible', err);
     return json({ paid: false, reason: 'network' }, 502);

@@ -2,20 +2,21 @@
 <html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>L’accompagnement trauma | Yousri Bendiabdallah</title>
-<meta name="description" content="Formation de 4 h, 5 heures de thérapie et suivi WhatsApp sous 24 h. 4 900 dirhams. — تكوين 4 ساعات، 5 ساعات علاج ومتابعة عبر واتساب. — 4-hour course, 5 hours of therapy and WhatsApp follow-up.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Méthode RED — Rapide, Efficace, Doux | Yousri Bendiabdallah</title>
+<meta name="description" content="Méthode RED : une thérapie rapide, efficace et douce. Prise de contact 30 min (300 DH), séance 1 h (600 DH), accompagnement 4 séances + Formation Healing (3 400 DH).">
 <!-- Page envoyée personnellement aux patients après un premier échange :
      elle n'est pas indexée par les moteurs de recherche.
      Langue : ?lang=fr (défaut), ?lang=ar ou ?lang=en -->
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://byousri.com/accompagnement/">
 <meta name="author" content="Yousri Bendiabdallah">
+<meta name="theme-color" content="#141B2E">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://byousri.com/accompagnement/">
-<meta property="og:title" content="L’accompagnement trauma — Yousri Bendiabdallah">
-<meta property="og:description" content="Formation 4 h · 5 h de thérapie · WhatsApp sous 24 h — 4 900 DH">
+<meta property="og:title" content="Méthode RED — Rapide, Efficace, Doux · Yousri Bendiabdallah">
+<meta property="og:description" content="Prise de contact 30 min · Séance 1 h · Accompagnement avec la Formation Healing.">
 <meta property="og:image" content="https://byousri.com/Share.png">
 <meta property="og:site_name" content="Yousri Bendiabdallah">
 <meta name="twitter:card" content="summary_large_image">
@@ -27,103 +28,213 @@
 <link rel="stylesheet" href="/assets/article.css">
 
 <style>
-  /* Styles propres à la page de l'accompagnement. */
-  .offer-head{padding-block:2rem 1.5rem}
-  .offer-head .standfirst{margin-bottom:0}
+  :root{
+    --paper:#FBF9F4;
+    --tint:#EEE8DD;
+    --plum-soft:rgba(83,50,85,.08);
+    --display:"Bricolage Grotesque", ui-sans-serif, sans-serif;
+  }
+  body{overflow-x:hidden}
+  .narrow{max-width:46rem}
+  .h2{
+    font-family:var(--display);font-weight:700;letter-spacing:-0.025em;line-height:1.15;
+    font-size:clamp(1.65rem,5.2vw,2.5rem);margin-bottom:.9rem;
+  }
+  .lead{font-size:1.1rem;color:var(--muted);line-height:1.65;max-width:40rem}
+  .band{padding-block:clamp(2.75rem,8vw,5rem)}
+  .band.alt{background:var(--tint)}
 
-  /* ---------- sélecteur de langue ---------- */
-  .lang-switch{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.8rem}
+  /* ---------- en-tête + langue ---------- */
+  .site-header .wrap{flex-wrap:nowrap}
+  .brand span{font-size:.98rem}
+  .lang-switch{display:flex;border:1px solid rgba(245,241,232,.3);flex:none}
   .lang-switch button{
-    font:inherit;font-size:.88rem;cursor:pointer;
-    background:transparent;color:var(--ink);
-    border:1px solid var(--line);padding:.35rem .85rem;
+    font:inherit;font-size:.82rem;font-weight:600;cursor:pointer;
+    background:transparent;color:var(--chalk);border:0;
+    min-width:2.75rem;min-height:2.4rem;padding:0 .6rem;
   }
-  .lang-switch button[aria-pressed="true"]{background:var(--ink);color:var(--chalk);border-color:var(--ink)}
-  .lang-switch button:hover{border-color:var(--plum)}
-  .lang-switch [lang="ar"]{font-family:"Noto Kufi Arabic", sans-serif}
+  .lang-switch button+button{border-inline-start:1px solid rgba(245,241,232,.3)}
+  .lang-switch button[aria-pressed="true"]{background:var(--chalk);color:var(--ink)}
+  .lang-switch [lang="ar"]{font-family:"Noto Kufi Arabic", sans-serif;font-weight:500}
 
-  .pillars{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1.25rem}
-  .pillar{
-    display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.4rem;align-items:start;
-    background:rgba(255,255,255,.55);border:1px solid var(--line);
-    padding:1.6rem 1.6rem 1.5rem;
+  /* ---------- boutons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+    min-height:3.25rem;padding:.8rem 1.5rem;
+    font-family:var(--display);font-weight:700;font-size:1.02rem;line-height:1.2;
+    text-decoration:none;text-align:center;cursor:pointer;
+    background:var(--plum);color:var(--chalk);border:1px solid var(--plum);
+    transition:background .15s ease,color .15s ease,border-color .15s ease;
   }
-  .pillar .num{
-    grid-row:span 3;
-    font-family:"Bricolage Grotesque", ui-sans-serif, sans-serif;font-weight:700;
-    font-size:2.6rem;line-height:1;color:var(--plum);letter-spacing:-0.04em;
-    min-width:2.2ch;
-  }
-  .pillar .tag{
-    font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--plum);font-weight:600;
-  }
-  .pillar h2{
-    font-family:"Bricolage Grotesque", ui-sans-serif, sans-serif;font-weight:700;
-    letter-spacing:-0.02em;line-height:1.2;font-size:clamp(1.3rem,3vw,1.6rem);
-    margin:0;
-  }
-  .pillar p{margin:.35rem 0 0;color:var(--muted)}
-  .pillar ul{margin-block:.7rem 0;margin-inline:1.2rem 0;color:var(--ink)}
-  .pillar li{margin-bottom:.35rem}
+  .btn:hover{background:var(--ink);border-color:var(--ink)}
+  .btn.light{background:var(--chalk);color:var(--ink);border-color:var(--chalk)}
+  .btn.light:hover{background:transparent;color:var(--chalk)}
+  .btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+  .btn.ghost:hover{background:var(--ink);color:var(--chalk);border-color:var(--ink)}
+  .btn:disabled{opacity:.7;cursor:wait}
 
-  .price-card{
-    margin:3rem 0 1rem;background:var(--ink);color:var(--chalk);
-    padding:clamp(1.6rem,4vw,2.4rem);
+  /* ---------- hero ---------- */
+  .hero{padding-block:clamp(2.25rem,7vw,4.5rem) clamp(2.5rem,7vw,4rem)}
+  .hero .kicker{display:inline-block;background:var(--plum-soft);padding:.4rem .75rem;margin-bottom:1.2rem}
+  .hero h1{font-size:clamp(2.3rem,8.5vw,4rem);margin-bottom:1.1rem;max-width:16ch}
+  .hero .lead{margin-bottom:1.8rem}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2rem}
+  .hero-meta{display:flex;align-items:center;gap:.85rem;font-size:.92rem;color:var(--muted);line-height:1.45}
+  .hero-meta img{width:3.25rem;height:3.25rem;border-radius:50%;object-fit:cover;object-position:50% 15%;flex:none}
+  .hero-meta strong{color:var(--ink);display:block}
+
+  /* ---------- pour qui ---------- */
+  .checks{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;gap:.85rem}
+  .checks li{position:relative;padding-inline-start:2.4rem;line-height:1.55}
+  .checks li::before{
+    content:"";position:absolute;inset-inline-start:0;top:.1rem;
+    width:1.55rem;height:1.55rem;border-radius:50%;background:var(--plum);
   }
-  .price-card .kicker{color:#d6b9d8;margin-bottom:.8rem}
-  .price{
-    font-family:"Bricolage Grotesque", ui-sans-serif, sans-serif;font-weight:700;
-    letter-spacing:-0.04em;line-height:1;font-size:clamp(2.6rem,9vw,3.8rem);
+  .checks li::after{
+    content:"";position:absolute;inset-inline-start:.5rem;top:.42rem;
+    width:.55rem;height:.85rem;border:solid var(--chalk);border-width:0 2.5px 2.5px 0;transform:rotate(45deg);
   }
-  .price small{font-size:.38em;letter-spacing:0;margin-inline-start:.35em;opacity:.8}
-  .recap{list-style:none;margin:1.5rem 0 1.8rem;padding:0;border-top:1px solid rgba(245,241,232,.18)}
-  .recap li{
-    display:flex;justify-content:space-between;gap:1rem;
-    padding:.7rem 0;border-bottom:1px solid rgba(245,241,232,.18);font-size:.98rem;
+
+  /* ---------- méthode RED ---------- */
+  .red-grid{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1rem}
+  .red-card{background:var(--paper);border:1px solid var(--line);padding:1.5rem 1.4rem;display:grid;grid-template-columns:auto 1fr;gap:.2rem 1.1rem}
+  .red-letter{
+    grid-row:span 2;font-family:var(--display);font-weight:700;font-size:3.1rem;line-height:.9;
+    color:var(--plum);width:2.6rem;text-align:center;
   }
-  .recap li span:last-child{font-weight:700;text-align:end}
-  .price-card .actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
-  .price-card .cta{font-size:1.05rem}
-  .cta.ghost{background:transparent;border-color:rgba(245,241,232,.5);color:var(--chalk)}
-  .cta.ghost:hover{background:var(--chalk);color:var(--ink);border-color:var(--chalk)}
-  .nowrap{white-space:nowrap}
-  .secure{margin-top:1.1rem;font-size:.85rem;opacity:.7}
-  .price-card form{margin:0}
-  .price-card button.cta{cursor:pointer}
-  .price-card button.cta:disabled{opacity:.7;cursor:wait}
+  .red-card h3{font-family:var(--display);font-size:1.3rem;letter-spacing:-0.015em;line-height:1.3}
+  .red-card p{color:var(--muted);font-size:.98rem;line-height:1.6}
+  .note{margin-top:1.5rem;font-size:.92rem;color:var(--muted);border-inline-start:3px solid var(--plum);padding-inline-start:1rem}
+
+  /* ---------- parcours / formules ---------- */
+  .offers{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1.5rem}
+  .offer{
+    position:relative;display:flex;flex-direction:column;
+    background:var(--paper);border:1px solid var(--line);padding:1.6rem 1.4rem 1.4rem;
+  }
+  .offer:not(:last-child)::after{
+    content:"";position:absolute;inset-inline-start:2.35rem;bottom:-1.5rem;
+    width:2px;height:1.5rem;background:rgba(83,50,85,.3);
+  }
+  .offer-top{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:1rem}
+  .offer-step{display:flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--plum)}
+  .offer-step .dot{
+    width:1.9rem;height:1.9rem;border-radius:50%;display:grid;place-items:center;
+    background:var(--plum);color:var(--chalk);font-size:.9rem;letter-spacing:0;
+  }
+  .badge{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#d6b9d8;color:var(--ink);padding:.3rem .6rem;white-space:nowrap}
+  .offer h3{font-family:var(--display);font-weight:700;font-size:1.5rem;letter-spacing:-0.02em;line-height:1.2}
+  .offer-meta{color:var(--muted);font-size:.95rem;margin-top:.2rem}
+  .offer-price{font-family:var(--display);font-weight:700;font-size:2.6rem;letter-spacing:-0.035em;line-height:1;margin:1rem 0 .9rem}
+  .offer-price .cur{font-size:.42em;letter-spacing:0;margin-inline-start:.3em;opacity:.75}
+  .offer-text{line-height:1.6;margin-bottom:1rem}
+  .offer .checks{margin:0 0 1.2rem;gap:.55rem;font-size:.96rem}
+  .offer .checks li{padding-inline-start:2rem}
+  .offer .checks li::before{width:1.3rem;height:1.3rem}
+  .offer .checks li::after{inset-inline-start:.42rem;top:.36rem;width:.46rem;height:.72rem;border-width:0 2px 2px 0}
+  .offer form{margin-top:auto}
+  .offer .btn{width:100%}
+  .offer.featured{background:var(--ink);color:var(--chalk);border-color:var(--ink)}
+  .offer.featured .offer-step{color:#d6b9d8}
+  .offer.featured .offer-step .dot{background:#d6b9d8;color:var(--ink)}
+  .offer.featured .offer-meta{color:rgba(245,241,232,.75)}
+  .offer.featured .checks li::before{background:#d6b9d8}
+  .offer.featured .checks li::after{border-color:var(--ink)}
+  .offer.featured .btn{background:var(--chalk);color:var(--ink);border-color:var(--chalk)}
+  .offer.featured .btn:hover{background:#d6b9d8;border-color:#d6b9d8}
+  .pay-note{margin-top:1.4rem;font-size:.9rem;color:var(--muted);text-align:center}
+  .pay-note a{color:var(--plum);font-weight:600}
   .pay-alert{
-    background:rgba(245,241,232,.1);border-inline-start:3px solid #e0a3a3;
-    padding:.8rem 1rem;margin:0 0 1.3rem;font-size:.95rem;
+    margin-top:1.5rem;background:#fbeaea;border-inline-start:3px solid #b54848;
+    padding:.85rem 1rem;font-size:.95rem;line-height:1.5;
   }
 
-  .steps{counter-reset:step;list-style:none;margin:1.2rem 0 0;padding:0}
-  .steps li{counter-increment:step;position:relative;padding-inline-start:2.6rem;margin-bottom:1rem}
+  /* ---------- formation ---------- */
+  .formation{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--plum);padding:clamp(1.5rem,5vw,2.4rem)}
+  .formation .kicker{margin-bottom:.6rem}
+
+  /* ---------- déroulement ---------- */
+  .how{list-style:none;margin:1.8rem 0 0;padding:0;display:grid;gap:1.2rem}
+  .how li{display:grid;grid-template-columns:auto 1fr;gap:.15rem 1rem;align-items:start}
+  .how svg{grid-row:span 2;width:2.6rem;height:2.6rem;padding:.6rem;background:var(--plum-soft);color:var(--plum);border-radius:50%}
+  .how strong{font-size:1.05rem}
+  .how span{color:var(--muted);font-size:.96rem;line-height:1.55}
+  .h3{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-0.015em;margin:2.6rem 0 1rem}
+  .steps{counter-reset:step;list-style:none;margin:0;padding:0}
+  .steps li{counter-increment:step;position:relative;padding-inline-start:2.6rem;margin-bottom:1rem;line-height:1.6}
   .steps li::before{
     content:counter(step);position:absolute;inset-inline-start:0;top:.05rem;
     width:1.8rem;height:1.8rem;border-radius:50%;
-    background:var(--plum);color:var(--chalk);font-weight:700;font-size:.9rem;
+    background:var(--ink);color:var(--chalk);font-weight:700;font-size:.88rem;
     display:grid;place-items:center;line-height:1;
   }
 
-  /* ---------- arabe (droite à gauche) ---------- */
-  html[lang="ar"] body{font-family:"Noto Naskh Arabic", serif;font-size:1.12rem;line-height:1.9}
-  html[lang="ar"] .display,
-  html[lang="ar"] h2,
-  html[lang="ar"] .pillar h2,
-  html[lang="ar"] .cta,
-  html[lang="ar"] .price small{font-family:"Noto Kufi Arabic", sans-serif;letter-spacing:0;line-height:1.5}
-  html[lang="ar"] .kicker,
-  html[lang="ar"] .pillar .tag{letter-spacing:0;font-family:"Noto Kufi Arabic", sans-serif}
-  html[lang="ar"] .callout{border-inline-start-width:1px}
+  /* ---------- qui suis-je ---------- */
+  .about{display:grid;gap:1.8rem;align-items:start}
+  .about img.portrait{width:100%;height:auto;max-width:22rem;aspect-ratio:1/1;object-fit:cover;object-position:50% 12%}
+  .about .role{font-weight:600;margin-bottom:.9rem;line-height:1.55}
+  .about p{line-height:1.7}
+  .media-label{margin-top:1.8rem;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .media{list-style:none;margin:.8rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+  .media img{width:3.4rem;height:3.4rem;object-fit:contain;background:#fff;border:1px solid var(--line);padding:.25rem}
 
-  @media (max-width:30rem){
-    .pillar{grid-template-columns:1fr}
-    .pillar .num{grid-row:auto;font-size:2.1rem;margin-bottom:.3rem}
-    .recap li{flex-direction:column;gap:.1rem}
-    .recap li span:last-child{text-align:start}
-    .price-card .cta,.price-card form{width:100%;text-align:center}
+  /* ---------- FAQ ---------- */
+  .faq summary{min-height:2.75rem;display:flex;align-items:center}
+  .faq details p a{color:var(--plum);font-weight:600}
+
+  /* ---------- appel final ---------- */
+  .end{background:var(--ink);color:var(--chalk);padding-block:clamp(3rem,9vw,5rem)}
+  .end .h2{color:var(--chalk)}
+  .end p{opacity:.85;margin-bottom:1.6rem;max-width:34rem}
+  .end-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+  .end form{margin:0}
+  footer .note-footer{margin-top:.6rem;opacity:.6;font-size:.82rem}
+
+  /* ---------- barre fixe mobile ---------- */
+  .sticky{display:none}
+  @media (max-width:47.99rem){
+    .sticky{
+      display:flex;align-items:center;justify-content:space-between;gap:.75rem;
+      position:fixed;z-index:20;inset-inline:0;bottom:0;
+      background:var(--ink);color:var(--chalk);
+      padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
+      box-shadow:0 -6px 20px rgba(20,27,46,.18);
+      transform:translateY(110%);transition:transform .25s ease;
+    }
+    .sticky.show{transform:none}
+    .sticky span{font-size:.92rem;line-height:1.3}
+    .sticky strong{display:block;font-family:var(--display);font-size:1.05rem}
+    .sticky .btn{min-height:2.75rem;padding:.55rem 1.1rem;font-size:.95rem;flex:none}
+    .hero-actions .btn,.end-actions .btn,.end-actions form{width:100%}
   }
+  @media (prefers-reduced-motion:reduce){.sticky{transition:none}}
+
+  /* ---------- grands écrans ---------- */
+  @media (min-width:48rem){
+    .red-grid{grid-template-columns:repeat(3,1fr)}
+    .red-card{grid-template-columns:1fr}
+    .red-letter{grid-row:auto;text-align:start;margin-bottom:.6rem}
+    .how{grid-template-columns:repeat(3,1fr)}
+    .about{grid-template-columns:18rem 1fr;gap:3rem}
+    .about img.portrait{aspect-ratio:4/5;object-position:50% 20%}
+  }
+  @media (min-width:62rem){
+    .offers{grid-template-columns:repeat(3,1fr);gap:1.25rem;align-items:stretch}
+    .offer:not(:last-child)::after{display:none}
+    .offer.featured{transform:translateY(-.75rem)}
+  }
+
+  /* ---------- arabe (droite à gauche) ---------- */
+  html[lang="ar"] body{font-family:"Noto Naskh Arabic", serif;font-size:1.1rem;line-height:1.9}
+  html[lang="ar"] .display,html[lang="ar"] .h2,html[lang="ar"] .h3,
+  html[lang="ar"] .btn,html[lang="ar"] .offer h3,html[lang="ar"] .red-card h3,
+  html[lang="ar"] .sticky strong,html[lang="ar"] .cur{
+    font-family:"Noto Kufi Arabic", sans-serif;letter-spacing:0;line-height:1.5}
+  html[lang="ar"] .kicker,html[lang="ar"] .offer-step,html[lang="ar"] .badge,
+  html[lang="ar"] .media-label{letter-spacing:0;font-family:"Noto Kufi Arabic", sans-serif}
+  html[lang="ar"] .hero h1{line-height:1.45}
+  html[lang="ar"] .checks li::after{transform:rotate(45deg)}
+  .nowrap{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -134,108 +245,267 @@
       <img src="/Logo%20transparent.png" alt="" width="128" height="128">
       <span>Yousri Bendiabdallah</span>
     </a>
+    <div class="lang-switch" role="group" aria-label="Langue / اللغة / Language">
+      <button type="button" data-lang="fr" lang="fr" aria-pressed="true" aria-label="Français">FR</button>
+      <button type="button" data-lang="ar" lang="ar" aria-pressed="false" aria-label="العربية">عربي</button>
+      <button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button>
+    </div>
   </div>
 </header>
 
-<div class="wrap reading offer-head">
-  <div class="lang-switch" role="group" aria-label="Langue / اللغة / Language">
-    <button type="button" data-lang="fr" lang="fr" aria-pressed="true">Français</button>
-    <button type="button" data-lang="ar" lang="ar" aria-pressed="false">العربية</button>
-    <button type="button" data-lang="en" lang="en" aria-pressed="false">English</button>
-  </div>
-
-  <p class="kicker" data-i18n="kicker">Votre accompagnement</p>
-  <h1 class="display" data-i18n="title">Comprendre vos traumatismes, et vous en libérer</h1>
-  <p class="standfirst" data-i18n="intro">Suite à notre échange, voici le détail de l’accompagnement que je vous propose.
-  Il réunit trois éléments : comprendre, traiter, et ne pas rester seul entre les séances.</p>
-</div>
-
 <main>
-<article class="wrap reading">
 
-<ol class="pillars">
-  <li class="pillar">
-    <span class="num" aria-hidden="true">01</span>
-    <span class="tag" data-i18n="p1_tag">Formation · 4 heures</span>
-    <h2 data-i18n="p1_title">Comprendre le fonctionnement interne du trauma</h2>
-    <div>
-      <p data-i18n="p1_text">Une formation de 4 heures pour comprendre ce qui se passe en vous :
-      pourquoi certaines réactions reviennent, pourquoi le temps seul ne suffit pas,
-      et comment le trauma continue d’agir dans le corps, les émotions et les relations.</p>
-      <ul>
-        <li data-i18n="p1_l1">Ce qu’est réellement un trauma, et comment il s’installe</li>
-        <li data-i18n="p1_l2">Le rôle du système nerveux et du corps</li>
-        <li data-i18n="p1_l3">Pourquoi on revit, on évite ou on se coupe</li>
-        <li data-i18n="p1_l4">Ce qui permet, concrètement, d’en sortir</li>
-      </ul>
-    </div>
-  </li>
-
-  <li class="pillar">
-    <span class="num" aria-hidden="true">02</span>
-    <span class="tag" data-i18n="p2_tag">Thérapie · 5 heures</span>
-    <h2 data-i18n="p2_title">Cinq heures de thérapie individuelle</h2>
-    <div>
-      <p data-i18n="p2_text">Cinq heures de séances en tête-à-tête avec moi, en français ou en arabe,
-      au cabinet ou à distance. On y travaille directement sur votre histoire,
-      à votre rythme, sans jamais vous forcer à raconter plus que ce que vous souhaitez.</p>
-    </div>
-  </li>
-
-  <li class="pillar">
-    <span class="num" aria-hidden="true">03</span>
-    <span class="tag" data-i18n="p3_tag">Suivi WhatsApp</span>
-    <h2 data-i18n="p3_title">Un accès direct à moi, pendant tout l’accompagnement</h2>
-    <div>
-      <p data-i18n="p3_text">Pendant toute la durée de l’accompagnement, vous pouvez m’écrire sur WhatsApp.
-      Je vous réponds <strong>dans les 24 heures au maximum</strong>. Une question,
-      une réaction qui vous inquiète, un moment difficile : vous n’attendez pas la
-      prochaine séance pour être entendu.</p>
-    </div>
-  </li>
-</ol>
-
-<section class="price-card" id="paiement" aria-labelledby="prix-titre">
-  <p class="kicker" id="prix-titre" data-i18n="price_kicker">Tarif de l’accompagnement</p>
-  <p class="price"><bdi dir="ltr" class="nowrap">4 900</bdi><small data-i18n="currency">dirhams</small></p>
-  <ul class="recap">
-    <li><span data-i18n="r1_l">Formation : comprendre le trauma</span><span data-i18n="r1_v">4 heures</span></li>
-    <li><span data-i18n="r2_l">Thérapie individuelle</span><span data-i18n="r2_v">5 heures</span></li>
-    <li><span data-i18n="r3_l">Suivi WhatsApp</span><span data-i18n="r3_v">Réponse sous 24 h</span></li>
-  </ul>
-  <p class="pay-alert" id="pay-alert" role="alert" hidden></p>
-  <div class="actions">
-    <!-- Le paiement est créé côté serveur (netlify/functions/ycp-checkout.mjs),
-         puis le patient est redirigé vers la page sécurisée YouCan Pay. -->
-    <form method="post" action="/api/paiement-accompagnement" id="pay-form">
-      <input type="hidden" name="lang" id="pay-lang" value="fr">
-      <button class="cta" type="submit" data-i18n="pay_btn">Payer 4 900 DH en ligne</button>
-    </form>
-    <a class="cta ghost" id="wa-question" href="https://wa.me/+212719597979" data-i18n="question_btn">Une question ? WhatsApp</a>
+<!-- ======================= HERO ======================= -->
+<section class="wrap hero" id="haut">
+  <p class="kicker" data-i18n="kicker">Méthode RED · Rapide, Efficace, Doux</p>
+  <h1 class="display" data-i18n="title">Une thérapie rapide, efficace et douce.</h1>
+  <p class="lead" data-i18n="intro">Pour les blessures qui pèsent encore aujourd’hui : traumas, dépendance affective,
+  schémas qui se répètent. Un parcours clair, en trois étapes, au rythme qui vous convient.</p>
+  <div class="hero-actions">
+    <a class="btn" href="#parcours" data-i18n="hero_cta">Commencer par 30 minutes</a>
+    <a class="btn ghost" href="#methode" data-i18n="hero_cta2">Découvrir la méthode</a>
   </div>
-  <p class="secure" data-i18n="secure">Paiement sécurisé par carte bancaire via YouCan Pay.</p>
+  <div class="hero-meta">
+    <img src="/assets/yousri-portrait.jpg" alt="" width="640" height="823">
+    <p><strong data-i18n="ab_name">Yousri Bendiabdallah</strong>
+    <span data-i18n="hero_meta">Praticien en psychothérapie · En français et en arabe, au Maroc et à distance</span></p>
+  </div>
 </section>
 
-<h2 data-i18n="steps_title">Comment ça se passe</h2>
-<ol class="steps">
-  <li data-i18n="s1">Vous réglez l’accompagnement en ligne, par carte, via le bouton ci-dessus.</li>
-  <li data-i18n="s2">Une fois le paiement validé, vous m’envoyez un message WhatsApp depuis la page de confirmation.</li>
-  <li data-i18n="s3">Je vous transmets l’accès à la formation et nous fixons ensemble la première séance.</li>
-</ol>
+<!-- ======================= POUR QUI ======================= -->
+<section class="band alt">
+  <div class="wrap narrow">
+    <h2 class="h2" data-i18n="fw_title">Cette approche est pour vous si…</h2>
+    <ul class="checks">
+      <li data-i18n="fw1">Une blessure ancienne continue d’agir sur votre présent, même si « ça fait longtemps ».</li>
+      <li data-i18n="fw2">Vous revivez les mêmes schémas : dans vos relations, vos réactions, vos choix.</li>
+      <li data-i18n="fw3">Vous vous sentez souvent en alerte, épuisé·e, ou coupé·e de vos émotions.</li>
+      <li data-i18n="fw4">Vous avez déjà beaucoup parlé, mais rien n’a vraiment bougé.</li>
+      <li data-i18n="fw5">Vous voulez avancer concrètement, sans être obligé·e de tout raconter.</li>
+    </ul>
+  </div>
+</section>
 
-<div class="callout">
-  <p class="callout-title" data-i18n="alt_title">Vous préférez payer autrement ?</p>
-  <p data-i18n="alt_text">Écrivez-moi sur <a href="https://wa.me/+212719597979">WhatsApp au 07 19 59 79 79</a>,
-  nous trouverons la solution qui vous convient.</p>
-</div>
+<!-- ======================= MÉTHODE RED ======================= -->
+<section class="band" id="methode">
+  <div class="wrap">
+    <p class="kicker" data-i18n="red_kicker">Ma méthode</p>
+    <h2 class="h2" data-i18n="red_title">La méthode RED</h2>
+    <p class="lead" data-i18n="red_intro">Trois principes guident chaque séance. C’est grâce à eux que l’on peut avancer vite, sans jamais vous forcer.</p>
+    <ul class="red-grid">
+      <li class="red-card">
+        <span class="red-letter" aria-hidden="true">R</span>
+        <h3 data-i18n="r_t">Rapide</h3>
+        <p data-i18n="r_x">On va à l’essentiel dès la première séance. Chaque séance a un objectif clair, et vous repartez avec des repères concrets. Pas de détours inutiles.</p>
+      </li>
+      <li class="red-card">
+        <span class="red-letter" aria-hidden="true">E</span>
+        <h3 data-i18n="e_t">Efficace</h3>
+        <p data-i18n="e_x">On ne travaille pas seulement sur le récit, mais sur ce qui entretient la souffrance aujourd’hui : les réactions du corps, les émotions, les croyances. Le changement se mesure dans votre quotidien.</p>
+      </li>
+      <li class="red-card">
+        <span class="red-letter" aria-hidden="true">D</span>
+        <h3 data-i18n="d_t">Doux</h3>
+        <p data-i18n="d_x">Vous n’avez jamais à tout raconter, ni à revivre ce qui fait mal pour avancer. Le travail se fait à votre rythme, dans un cadre sûr et bienveillant, sans jugement.</p>
+      </li>
+    </ul>
+    <p class="note narrow" data-i18n="red_note">Chaque histoire est différente : je ne promets pas de résultat en un nombre fixe de séances. Je m’engage à un travail clair, honnête et respectueux de votre rythme.</p>
+  </div>
+</section>
 
-</article>
+<!-- ======================= PARCOURS ======================= -->
+<section class="band alt" id="parcours">
+  <div class="wrap">
+    <p class="kicker" data-i18n="p_kicker">Votre parcours</p>
+    <h2 class="h2" data-i18n="p_title">Trois étapes, à votre rythme</h2>
+    <p class="lead" data-i18n="p_intro">Chaque étape est indépendante : vous décidez à chaque fois si vous continuez. Vous pouvez aussi commencer directement par l’accompagnement.</p>
+    <p class="pay-alert" id="pay-alert" role="alert" hidden></p>
+
+    <!-- Les paiements sont créés côté serveur (netlify/functions/ycp-checkout.mjs) :
+         le prix de chaque formule y est fixé, le navigateur n'envoie que son nom. -->
+    <ol class="offers">
+      <li class="offer" id="etape-1">
+        <div class="offer-top">
+          <p class="offer-step"><span class="dot">1</span><span data-i18n="step1">Étape 1</span></p>
+        </div>
+        <h3 data-i18n="s1_title">Prise de contact</h3>
+        <p class="offer-meta" data-i18n="s1_meta">30 minutes</p>
+        <p class="offer-price"><bdi dir="ltr" class="nowrap">300</bdi><span class="cur" data-i18n="cur">DH</span></p>
+        <p class="offer-text" data-i18n="s1_text">On fait le point sur votre situation, je vous explique comment je travaille, et on vérifie ensemble que la méthode RED vous correspond.</p>
+        <form method="post" action="/api/paiement" class="pay-form">
+          <input type="hidden" name="product" value="appel">
+          <input type="hidden" name="lang" value="fr">
+          <button class="btn" type="submit" data-i18n="s1_btn">Réserver · 300 DH</button>
+        </form>
+      </li>
+
+      <li class="offer" id="etape-2">
+        <div class="offer-top">
+          <p class="offer-step"><span class="dot">2</span><span data-i18n="step2">Étape 2</span></p>
+        </div>
+        <h3 data-i18n="s2_title">Séance individuelle</h3>
+        <p class="offer-meta" data-i18n="s2_meta">1 heure</p>
+        <p class="offer-price"><bdi dir="ltr" class="nowrap">600</bdi><span class="cur" data-i18n="cur">DH</span></p>
+        <p class="offer-text" data-i18n="s2_text">Une séance complète pour commencer le travail en profondeur sur ce qui vous pèse, et repartir avec de premiers repères concrets.</p>
+        <form method="post" action="/api/paiement" class="pay-form">
+          <input type="hidden" name="product" value="seance">
+          <input type="hidden" name="lang" value="fr">
+          <button class="btn" type="submit" data-i18n="s2_btn">Réserver · 600 DH</button>
+        </form>
+      </li>
+
+      <li class="offer featured" id="etape-3">
+        <div class="offer-top">
+          <p class="offer-step"><span class="dot">3</span><span data-i18n="step3">Étape 3</span></p>
+          <span class="badge" data-i18n="s3_badge">Le plus complet</span>
+        </div>
+        <h3 data-i18n="s3_title">Accompagnement</h3>
+        <p class="offer-meta" data-i18n="s3_meta">4 séances + Formation Healing</p>
+        <p class="offer-price"><bdi dir="ltr" class="nowrap" data-i18n="n3">3 400</bdi><span class="cur" data-i18n="cur">DH</span></p>
+        <p class="offer-text" data-i18n="s3_text">Le parcours complet pour transformer en profondeur ce qui vous fait souffrir, avec un cadre et un suivi.</p>
+        <ul class="checks">
+          <li data-i18n="s3_i1">4 séances individuelles d’1 heure</li>
+          <li data-i18n="s3_i2">La Formation Healing incluse (4 heures)</li>
+          <li data-i18n="s3_i3">Suivi WhatsApp entre les séances, réponse sous 24 h</li>
+          <li data-i18n="s3_i4">Un questionnaire de démarrage pour préparer le travail</li>
+        </ul>
+        <form method="post" action="/api/paiement" class="pay-form">
+          <input type="hidden" name="product" value="accompagnement">
+          <input type="hidden" name="lang" value="fr">
+          <button class="btn" type="submit" data-i18n="s3_btn">Commencer · 3 400 DH</button>
+        </form>
+      </li>
+    </ol>
+    <p class="pay-note" data-i18n="secure">Paiement sécurisé par carte bancaire via YouCan Pay. Vous préférez un virement ? <a href="https://wa.me/+212719597979" class="wa-link">Écrivez-moi sur WhatsApp</a>.</p>
+  </div>
+</section>
+
+<!-- ======================= FORMATION ======================= -->
+<section class="band">
+  <div class="wrap narrow">
+    <div class="formation">
+      <p class="kicker" data-i18n="f_kicker">Incluse dans l’accompagnement</p>
+      <h2 class="h2" data-i18n="f_title">La Formation Healing</h2>
+      <p data-i18n="f_text">4 heures pour comprendre ce qui se passe en vous et reprendre la main. Une base solide, pour que le travail en séance aille plus loin.</p>
+      <ul class="checks">
+        <li data-i18n="f_l1">D’où viennent les blessures émotionnelles, et pourquoi elles restent actives</li>
+        <li data-i18n="f_l2">Le rôle du corps et du système nerveux dans ce que vous ressentez</li>
+        <li data-i18n="f_l3">Pourquoi les mêmes schémas se répètent, en vous et dans vos relations</li>
+        <li data-i18n="f_l4">Des outils simples pour vous apaiser et avancer au quotidien</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= DÉROULEMENT ======================= -->
+<section class="band alt">
+  <div class="wrap">
+    <h2 class="h2" data-i18n="h_title">Comment se déroulent les séances</h2>
+    <ul class="how">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <strong data-i18n="h1_t">En français ou en arabe</strong>
+        <span data-i18n="h1_x">Vous vous exprimez dans la langue où vous êtes le plus à l’aise.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <strong data-i18n="h2_t">En présentiel ou à distance</strong>
+        <span data-i18n="h2_x">Au cabinet ou en visio, depuis le Maroc ou l’étranger.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        <strong data-i18n="h3_t">Confidentiel</strong>
+        <span data-i18n="h3_x">Ce que vous partagez reste entre nous. Toujours.</span>
+      </li>
+    </ul>
+
+    <h3 class="h3" data-i18n="a_title">Après votre paiement</h3>
+    <ol class="steps narrow">
+      <li data-i18n="a1">Vous réglez en ligne, par carte, en quelques secondes.</li>
+      <li data-i18n="a2">Sur la page de confirmation, vous m’écrivez sur WhatsApp en un clic.</li>
+      <li data-i18n="a3">Nous fixons ensemble le créneau. Pour l’accompagnement, je vous envoie aussi le questionnaire de démarrage et l’accès à la formation.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= QUI SUIS-JE ======================= -->
+<section class="band">
+  <div class="wrap about">
+    <img class="portrait" src="/assets/yousri-portrait.jpg" alt="Yousri Bendiabdallah" width="640" height="823" loading="lazy">
+    <div>
+      <p class="kicker" data-i18n="ab_kicker">Qui suis-je</p>
+      <h2 class="h2" data-i18n="ab_name">Yousri Bendiabdallah</h2>
+      <p class="role" data-i18n="ab_role">Entrepreneur, coach et praticien en psychothérapie, spécialisé dans les traumas et la dépendance affective.</p>
+      <p data-i18n="ab_text">J’ai moi-même traversé des épreuves qui m’ont appris une chose : la douleur peut changer un homme, mais elle ne décide pas de son avenir. Aujourd’hui, j’aide chacun à se comprendre, à faire la paix avec hier et à construire un avenir que les blessures d’avant ne gouvernent plus.</p>
+      <p class="media-label" data-i18n="media_label">Vu à la télévision et dans la presse</p>
+      <ul class="media">
+        <li><img src="/assets/media/al-aoula.jpg" alt="Al Aoula" width="128" height="134" loading="lazy"></li>
+        <li><img src="/assets/media/mbc5.jpg" alt="MBC 5" width="128" height="128" loading="lazy"></li>
+        <li><img src="/assets/media/chada-tv.jpg" alt="Chada TV" width="128" height="128" loading="lazy"></li>
+        <li><img src="/assets/media/tele-maroc.jpg" alt="Télé Maroc" width="128" height="128" loading="lazy"></li>
+        <li><img src="/assets/media/nouvelle-tribune.jpg" alt="La Nouvelle Tribune" width="128" height="128" loading="lazy"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="band alt">
+  <div class="wrap narrow">
+    <h2 class="h2" data-i18n="faq_title">Questions fréquentes</h2>
+    <div class="faq">
+      <details>
+        <summary data-i18n="q1">Par quelle étape commencer ?</summary>
+        <p data-i18n="qa1">Si vous hésitez, commencez par la prise de contact de 30 minutes. Si vous savez déjà que vous voulez être accompagné·e, vous pouvez réserver directement l’accompagnement.</p>
+      </details>
+      <details>
+        <summary data-i18n="q2">Et si j’ai besoin de plus de 4 séances ?</summary>
+        <p data-i18n="qa2">Nous faisons le point ensemble à la fin de l’accompagnement. Si c’est utile, vous pouvez poursuivre avec des séances individuelles, à 600 DH la séance.</p>
+      </details>
+      <details>
+        <summary data-i18n="q3">En combien de temps vais-je me sentir mieux ?</summary>
+        <p data-i18n="qa3">Cela dépend de votre histoire et de ce que vous vivez aujourd’hui. La méthode RED vise des changements concrets dès les premières séances, mais je ne promets jamais de résultat en un nombre fixe de séances.</p>
+      </details>
+      <details>
+        <summary data-i18n="q4">Dois-je tout raconter ?</summary>
+        <p data-i18n="qa4">Non. Vous gardez à tout moment le contrôle de ce que vous dites et de ce que vous gardez pour vous. C’est le « D » de la méthode RED.</p>
+      </details>
+      <details>
+        <summary data-i18n="q5">Puis-je payer par virement ?</summary>
+        <p data-i18n="qa5">Oui. <a href="https://wa.me/+212719597979" class="wa-link">Écrivez-moi sur WhatsApp</a> et je vous envoie les coordonnées bancaires.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= APPEL FINAL ======================= -->
+<section class="end" id="fin">
+  <div class="wrap">
+    <h2 class="h2" data-i18n="end_title">Le premier pas tient en 30 minutes.</h2>
+    <p data-i18n="end_text">On fait le point ensemble, simplement. Vous décidez ensuite de la suite.</p>
+    <div class="end-actions">
+      <form method="post" action="/api/paiement" class="pay-form">
+        <input type="hidden" name="product" value="appel">
+        <input type="hidden" name="lang" value="fr">
+        <button class="btn light" type="submit" data-i18n="end_btn">Réserver la prise de contact · 300 DH</button>
+      </form>
+      <a class="btn ghost wa-link" href="https://wa.me/+212719597979" data-i18n="end_wa">Une question ? WhatsApp</a>
+    </div>
+  </div>
+</section>
+
 </main>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <span><strong data-i18n="sticky_title">Méthode RED</strong><span data-i18n="sticky_text">Dès 300 DH · 30 min</span></span>
+  <a class="btn" href="#parcours" tabindex="-1" data-i18n="sticky_btn">Voir les formules</a>
+</div>
 
 <footer>
   <div class="wrap">
     <div>
       <p data-i18n="footer">© 2026 Yousri Bendiabdallah — Praticien en psychothérapie, Maroc</p>
+      <p class="note-footer" data-i18n="footer_note">Ce site ne remplace pas un avis médical. En cas d’urgence, appelez le 141 (SAMU).</p>
     </div>
     <nav aria-label="Réseaux sociaux">
       <a href="https://www.instagram.com/byousri/" target="_blank" rel="noopener">Instagram</a>
@@ -249,89 +519,205 @@
 <script>
 (function () {
   var WA = 'https://wa.me/+212719597979';
+  var waLink = function (text) { return '<a href="' + WA + '" class="wa-link">' + text + '</a>'; };
+
   var T = {
     fr: {
-      _title: 'L’accompagnement trauma | Yousri Bendiabdallah',
-      _wa_question: 'Bonjour Yousri, j’ai une question sur l’accompagnement.',
+      _title: 'Méthode RED — Rapide, Efficace, Doux | Yousri Bendiabdallah',
+      _wa_question: 'Bonjour Yousri, j’ai une question sur vos séances.',
       _err_echec: 'Le paiement n’a pas abouti et aucun montant n’a été débité. Vous pouvez réessayer, ou m’écrire sur WhatsApp.',
       _err_erreur: 'Le paiement en ligne est momentanément indisponible. Écrivez-moi sur WhatsApp, je vous envoie un autre moyen de règlement.',
       _redirect: 'Redirection vers le paiement…'
     },
     ar: {
-      _title: 'مرافقة علاج الصدمات | يسري بنديبدالله',
-      _wa_question: 'السلام عليكم يسري، عندي سؤال حول المرافقة.',
-      _err_echec: 'لم تتم عملية الدفع ولم يتم خصم أي مبلغ. يمكنكم المحاولة مرة أخرى، أو مراسلتي عبر واتساب.',
-      _err_erreur: 'الدفع الإلكتروني غير متاح مؤقتاً. راسلوني عبر واتساب وسأرسل لكم طريقة أخرى للدفع.',
+      _title: 'منهج RED — سريع، فعّال، لطيف | يسري بنديبدالله',
+      _wa_question: 'السلام عليكم يسري، عندي سؤال حول الجلسات.',
+      _err_echec: 'لم تتم عملية الدفع ولم يتم خصم أي مبلغ. يمكنك المحاولة مرة أخرى، أو مراسلتي عبر واتساب.',
+      _err_erreur: 'الدفع الإلكتروني غير متاح مؤقتاً. راسلني عبر واتساب وسأرسل لك طريقة أخرى للدفع.',
       _redirect: 'جارٍ التحويل إلى صفحة الدفع…',
-      kicker: 'مرافقتك',
-      title: 'افهم صدماتك، وتحرّر منها',
-      intro: 'بعد حديثنا، إليك تفاصيل المرافقة التي أقترحها عليك. وهي تجمع ثلاثة عناصر: أن تفهم، أن تعالج، وألا تبقى وحيداً بين الجلسات.',
-      p1_tag: 'تكوين · 4 ساعات',
-      p1_title: 'فهم كيف تعمل الصدمة من الداخل',
-      p1_text: 'تكوين مدته 4 ساعات لتفهم ما يحدث بداخلك: لماذا تتكرر بعض ردود الفعل، ولماذا لا يكفي الوقت وحده، وكيف تستمر الصدمة في التأثير على الجسد والمشاعر والعلاقات.',
-      p1_l1: 'ما هي الصدمة حقاً، وكيف تترسخ',
-      p1_l2: 'دور الجهاز العصبي والجسد',
-      p1_l3: 'لماذا نعيش الموقف من جديد، أو نتجنّب، أو ننفصل عن أنفسنا',
-      p1_l4: 'ما الذي يساعد فعلياً على الخروج منها',
-      p2_tag: 'علاج · 5 ساعات',
-      p2_title: 'خمس ساعات من العلاج الفردي',
-      p2_text: 'خمس ساعات من الجلسات الفردية معي، بالعربية أو بالفرنسية، في العيادة أو عن بُعد. نشتغل فيها مباشرة على قصتك، بالإيقاع الذي يناسبك، دون أن أطلب منك أبداً أن تحكي أكثر مما تريد.',
-      p3_tag: 'متابعة عبر واتساب',
-      p3_title: 'تواصل مباشر معي طوال مدة المرافقة',
-      p3_text: 'طوال مدة المرافقة، يمكنك مراسلتي عبر واتساب، وأجيبك <strong>في أجل أقصاه 24 ساعة</strong>. سؤال، رد فعل يقلقك، لحظة صعبة: لن تنتظر الجلسة القادمة ليُسمع صوتك.',
-      price_kicker: 'ثمن المرافقة',
-      currency: 'درهم',
-      r1_l: 'تكوين: فهم الصدمة', r1_v: '4 ساعات',
-      r2_l: 'علاج فردي', r2_v: '5 ساعات',
-      r3_l: 'متابعة عبر واتساب', r3_v: 'رد خلال 24 ساعة',
-      pay_btn: 'ادفع 4900 درهم عبر الإنترنت',
-      question_btn: 'سؤال؟ واتساب',
-      secure: 'دفع آمن بالبطاقة البنكية عبر YouCan Pay.',
-      steps_title: 'كيف تتم العملية',
-      s1: 'تدفع ثمن المرافقة عبر الإنترنت بالبطاقة البنكية، من خلال الزر أعلاه.',
-      s2: 'بعد تأكيد الدفع، ترسل لي رسالة عبر واتساب من صفحة التأكيد.',
-      s3: 'أرسل لك رابط الولوج إلى التكوين، ونحدد معاً موعد الجلسة الأولى.',
-      alt_title: 'تفضّل طريقة دفع أخرى؟',
-      alt_text: 'راسلني عبر <a href="' + WA + '">واتساب على الرقم <bdi dir="ltr" class="nowrap">07 19 59 79 79</bdi></a>، وسنجد الحل الذي يناسبك.',
-      footer: '© 2026 يسري بنديبدالله — ممارس في العلاج النفسي، المغرب'
+      kicker: 'منهج RED · سريع، فعّال، لطيف',
+      title: 'علاج نفسي سريع، فعّال ولطيف.',
+      intro: 'للجراح التي ما زالت تثقل حياتك اليوم: الصدمات النفسية، التعلّق العاطفي، والأنماط التي تتكرر. مسار واضح من ثلاث مراحل، بالإيقاع الذي يناسبك.',
+      hero_cta: 'ابدأ بـ 30 دقيقة',
+      hero_cta2: 'اكتشف المنهج',
+      ab_name: 'يسري بنديبدالله',
+      hero_meta: 'ممارس في العلاج النفسي · بالعربية والفرنسية، في المغرب وعن بُعد',
+      fw_title: 'هذا المنهج مناسب لك إذا…',
+      fw1: 'جرح قديم ما زال يؤثر على حاضرك، حتى لو مرّ عليه وقت طويل.',
+      fw2: 'تعيش نفس الأنماط مرة بعد مرة: في علاقاتك، في ردود أفعالك، في اختياراتك.',
+      fw3: 'تشعر في كثير من الأحيان بالتوتر الدائم أو الإرهاق، أو بالانفصال عن مشاعرك.',
+      fw4: 'تكلّمت كثيراً من قبل، لكن لا شيء تغيّر فعلاً.',
+      fw5: 'تريد أن تتقدّم بشكل ملموس، دون أن تُجبر على حكي كل شيء.',
+      red_kicker: 'منهجي',
+      red_title: 'منهج RED',
+      red_intro: 'ثلاثة مبادئ توجّه كل جلسة. وبفضلها نستطيع التقدّم بسرعة، دون أن أضغط عليك أبداً.',
+      r_t: 'سريع',
+      r_x: 'نذهب إلى الجوهر منذ الجلسة الأولى. لكل جلسة هدف واضح، وتخرج منها بمعالم ملموسة. دون التفافات لا فائدة منها.',
+      e_t: 'فعّال',
+      e_x: 'لا نشتغل فقط على الحكاية، بل على ما يُبقي المعاناة حيّة اليوم: ردود فعل الجسد، المشاعر، والمعتقدات. والتغيير يُقاس في حياتك اليومية.',
+      d_t: 'لطيف',
+      d_x: 'لن تكون مضطراً أبداً لحكي كل شيء، ولا لإعادة عيش ما يؤلمك كي تتقدّم. يتم العمل بإيقاعك، في إطار آمن ومتفهّم، دون أحكام.',
+      red_note: 'كل قصة مختلفة: لا أعدك بنتيجة في عدد محدد من الجلسات. ألتزم بعمل واضح وصادق يحترم إيقاعك.',
+      p_kicker: 'مسارك',
+      p_title: 'ثلاث مراحل، بإيقاعك',
+      p_intro: 'كل مرحلة مستقلة: أنت من يقرر في كل مرة إن كنت تريد الاستمرار. ويمكنك أيضاً أن تبدأ مباشرة بالمرافقة.',
+      step1: 'المرحلة 1', step2: 'المرحلة 2', step3: 'المرحلة 3',
+      cur: 'درهم', n3: '3400',
+      s1_title: 'جلسة تعارف',
+      s1_meta: '30 دقيقة',
+      s1_text: 'نقيّم وضعك معاً، أشرح لك طريقة عملي، ونتأكد معاً أن منهج RED يناسبك.',
+      s1_btn: 'احجز · 300 درهم',
+      s2_title: 'جلسة فردية',
+      s2_meta: 'ساعة واحدة',
+      s2_text: 'جلسة كاملة لنبدأ العمل في العمق على ما يثقلك، وتخرج منها بأولى المعالم الملموسة.',
+      s2_btn: 'احجز · 600 درهم',
+      s3_badge: 'الأكثر شمولاً',
+      s3_title: 'المرافقة',
+      s3_meta: '4 جلسات + تكوين Healing',
+      s3_text: 'المسار الكامل لتغيير ما يؤلمك في العمق، مع إطار واضح ومتابعة.',
+      s3_i1: '4 جلسات فردية، مدة كل منها ساعة',
+      s3_i2: 'تكوين Healing مُدرج (4 ساعات)',
+      s3_i3: 'متابعة عبر واتساب بين الجلسات، مع رد خلال 24 ساعة',
+      s3_i4: 'استبيان أولي لتحضير العمل',
+      s3_btn: 'ابدأ · 3400 درهم',
+      secure: 'دفع آمن بالبطاقة البنكية عبر YouCan Pay. تفضّل التحويل البنكي؟ ' + waLink('راسلني عبر واتساب') + '.',
+      f_kicker: 'مُدرج في المرافقة',
+      f_title: 'تكوين Healing',
+      f_text: '4 ساعات لتفهم ما يحدث بداخلك وتستعيد زمام الأمور. أساس متين يجعل العمل في الجلسات يذهب أبعد.',
+      f_l1: 'من أين تأتي الجراح العاطفية، ولماذا تبقى نشطة',
+      f_l2: 'دور الجسد والجهاز العصبي فيما تشعر به',
+      f_l3: 'لماذا تتكرر نفس الأنماط، بداخلك وفي علاقاتك',
+      f_l4: 'أدوات بسيطة لتهدأ وتتقدّم في حياتك اليومية',
+      h_title: 'كيف تتم الجلسات',
+      h1_t: 'بالعربية أو بالفرنسية',
+      h1_x: 'تتحدث باللغة التي تشعر فيها براحة أكبر.',
+      h2_t: 'حضورياً أو عن بُعد',
+      h2_x: 'في العيادة أو عبر الفيديو، من المغرب أو من الخارج.',
+      h3_t: 'سرية تامة',
+      h3_x: 'ما تشاركه يبقى بيننا. دائماً.',
+      a_title: 'بعد الدفع',
+      a1: 'تدفع عبر الإنترنت بالبطاقة البنكية، في ثوانٍ.',
+      a2: 'من صفحة التأكيد، تراسلني عبر واتساب بنقرة واحدة.',
+      a3: 'نحدد الموعد معاً. وبالنسبة للمرافقة، أرسل لك أيضاً الاستبيان الأولي ورابط الولوج إلى التكوين.',
+      ab_kicker: 'من أنا',
+      ab_role: 'رجل أعمال، كوتش، وممارس في العلاج النفسي، مختص في الصدمات النفسية والتعلّق العاطفي.',
+      ab_text: 'مررتُ بنفسي بتجارب صعبة علّمتني أن الألم قد يغيّر الإنسان، لكنه لا يحدد مستقبله. اليوم، أساعد كل شخص على فهم نفسه، والتصالح مع ماضيه، وبناء مستقبل لا تتحكم فيه جراح الأمس.',
+      media_label: 'في التلفزيون والصحافة',
+      faq_title: 'أسئلة متكررة',
+      q1: 'بأي مرحلة أبدأ؟',
+      qa1: 'إذا كنت متردداً، ابدأ بجلسة التعارف لمدة 30 دقيقة. وإذا كنت تعرف أنك تريد مرافقة، يمكنك حجز المرافقة مباشرة.',
+      q2: 'وإذا احتجت إلى أكثر من 4 جلسات؟',
+      qa2: 'نقيّم الوضع معاً في نهاية المرافقة. وإذا كان ذلك مفيداً، يمكنك المتابعة بجلسات فردية، بـ 600 درهم للجلسة.',
+      q3: 'متى سأشعر بالتحسّن؟',
+      qa3: 'هذا يتوقف على قصتك وعلى ما تعيشه اليوم. يهدف منهج RED إلى تغييرات ملموسة منذ الجلسات الأولى، لكنني لا أعد أبداً بنتيجة في عدد محدد من الجلسات.',
+      q4: 'هل يجب أن أحكي كل شيء؟',
+      qa4: 'لا. تبقى دائماً متحكماً فيما تقوله وفيما تحتفظ به لنفسك. هذا هو حرف «D» في منهج RED.',
+      q5: 'هل يمكنني الدفع بالتحويل البنكي؟',
+      qa5: 'نعم. ' + waLink('راسلني عبر واتساب') + ' وسأرسل لك المعلومات البنكية.',
+      end_title: 'الخطوة الأولى لا تتطلب سوى 30 دقيقة.',
+      end_text: 'نقيّم الوضع معاً، ببساطة. ثم تقرر أنت ما يلي.',
+      end_btn: 'احجز جلسة التعارف · 300 درهم',
+      end_wa: 'سؤال؟ واتساب',
+      sticky_title: 'منهج RED',
+      sticky_text: 'ابتداءً من 300 درهم · 30 دقيقة',
+      sticky_btn: 'اختر صيغتك',
+      footer: '© 2026 يسري بنديبدالله — ممارس في العلاج النفسي، المغرب',
+      footer_note: 'هذا الموقع لا يعوّض الاستشارة الطبية. في حالة الطوارئ، اتصل بالرقم 141.'
     },
     en: {
-      _title: 'Trauma programme | Yousri Bendiabdallah',
-      _wa_question: 'Hello Yousri, I have a question about the programme.',
+      _title: 'The RED method — Rapid, Effective, Done gently | Yousri Bendiabdallah',
+      _wa_question: 'Hello Yousri, I have a question about your sessions.',
       _err_echec: 'The payment did not go through and nothing was charged. You can try again, or message me on WhatsApp.',
       _err_erreur: 'Online payment is temporarily unavailable. Message me on WhatsApp and I will send you another way to pay.',
       _redirect: 'Redirecting to payment…',
-      kicker: 'Your programme',
-      title: 'Understand your trauma, and free yourself from it',
-      intro: 'Following our conversation, here are the details of the programme I am offering you. It brings together three things: understanding, healing, and not being alone between sessions.',
-      p1_tag: 'Course · 4 hours',
-      p1_title: 'Understanding how trauma works from the inside',
-      p1_text: 'A 4-hour course to understand what is happening inside you: why certain reactions keep coming back, why time alone is not enough, and how trauma keeps acting on the body, emotions and relationships.',
-      p1_l1: 'What trauma really is, and how it takes hold',
-      p1_l2: 'The role of the nervous system and the body',
-      p1_l3: 'Why we relive, avoid or shut down',
-      p1_l4: 'What concretely helps you move beyond it',
-      p2_tag: 'Therapy · 5 hours',
-      p2_title: 'Five hours of one-to-one therapy',
-      p2_text: 'Five hours of one-to-one sessions with me, in French or Arabic, in person or online. We work directly on your story, at your own pace, without ever pushing you to share more than you want to.',
-      p3_tag: 'WhatsApp follow-up',
-      p3_title: 'Direct access to me throughout the programme',
-      p3_text: 'For the whole duration of the programme, you can message me on WhatsApp. I reply <strong>within 24 hours at most</strong>. A question, a reaction that worries you, a hard moment: you don’t have to wait for the next session to be heard.',
-      price_kicker: 'Programme fee',
-      currency: 'dirhams',
-      r1_l: 'Course: understanding trauma', r1_v: '4 hours',
-      r2_l: 'One-to-one therapy', r2_v: '5 hours',
-      r3_l: 'WhatsApp follow-up', r3_v: 'Reply within 24 h',
-      pay_btn: 'Pay 4,900 MAD online',
-      question_btn: 'A question? WhatsApp',
-      secure: 'Secure card payment via YouCan Pay.',
-      steps_title: 'How it works',
-      s1: 'You pay for the programme online, by card, using the button above.',
-      s2: 'Once the payment is confirmed, you send me a WhatsApp message from the confirmation page.',
-      s3: 'I send you access to the course and we schedule your first session together.',
-      alt_title: 'Prefer another way to pay?',
-      alt_text: 'Message me on <a href="' + WA + '">WhatsApp at +212 7 19 59 79 79</a> and we will find what works for you.',
-      footer: '© 2026 Yousri Bendiabdallah — Psychotherapy practitioner, Morocco'
+      kicker: 'The RED method · Rapid, Effective, Done gently',
+      title: 'Therapy that is rapid, effective and gentle.',
+      intro: 'For the wounds that still weigh on you today: trauma, emotional dependency, patterns that keep repeating. A clear three-step path, at a pace that suits you.',
+      hero_cta: 'Start with 30 minutes',
+      hero_cta2: 'Discover the method',
+      ab_name: 'Yousri Bendiabdallah',
+      hero_meta: 'Psychotherapy practitioner · In French and Arabic, in Morocco and online',
+      fw_title: 'This is for you if…',
+      fw1: 'An old wound still shapes your present, even if “it was a long time ago”.',
+      fw2: 'You keep living the same patterns: in your relationships, your reactions, your choices.',
+      fw3: 'You often feel on edge, exhausted, or cut off from your emotions.',
+      fw4: 'You have already talked a lot, but nothing has really shifted.',
+      fw5: 'You want concrete progress, without having to tell everything.',
+      red_kicker: 'My method',
+      red_title: 'The RED method',
+      red_intro: 'Three principles guide every session. They are what lets us move fast without ever forcing you.',
+      r_t: 'Rapid',
+      r_x: 'We go straight to what matters from the first session. Every session has a clear goal, and you leave with concrete markers. No pointless detours.',
+      e_t: 'Effective',
+      e_x: 'We don’t only work on the story, but on what keeps the suffering alive today: the body’s reactions, emotions and beliefs. Change is measured in your daily life.',
+      d_t: 'Done gently',
+      d_x: 'You never have to tell everything, or relive what hurts, to move forward. We work at your pace, in a safe, caring space, without judgment.',
+      red_note: 'Every story is different: I never promise results in a fixed number of sessions. I commit to clear, honest work that respects your pace.',
+      p_kicker: 'Your path',
+      p_title: 'Three steps, at your pace',
+      p_intro: 'Each step stands on its own: you decide each time whether to continue. You can also start directly with the programme.',
+      step1: 'Step 1', step2: 'Step 2', step3: 'Step 3',
+      cur: 'MAD', n3: '3,400',
+      s1_title: 'Discovery call',
+      s1_meta: '30 minutes',
+      s1_text: 'We review your situation, I explain how I work, and we check together that the RED method is right for you.',
+      s1_btn: 'Book · 300 MAD',
+      s2_title: 'Individual session',
+      s2_meta: '1 hour',
+      s2_text: 'A full session to start working in depth on what weighs on you, and leave with your first concrete markers.',
+      s2_btn: 'Book · 600 MAD',
+      s3_badge: 'Most complete',
+      s3_title: 'Programme',
+      s3_meta: '4 sessions + Healing course',
+      s3_text: 'The complete path to deeply transform what makes you suffer, with structure and follow-up.',
+      s3_i1: '4 one-hour individual sessions',
+      s3_i2: 'The Healing course included (4 hours)',
+      s3_i3: 'WhatsApp follow-up between sessions, reply within 24 h',
+      s3_i4: 'A starting questionnaire to prepare our work',
+      s3_btn: 'Start · 3,400 MAD',
+      secure: 'Secure card payment via YouCan Pay. Prefer a bank transfer? ' + waLink('Message me on WhatsApp') + '.',
+      f_kicker: 'Included in the programme',
+      f_title: 'The Healing course',
+      f_text: '4 hours to understand what is happening inside you and take back control. A solid foundation, so the work in sessions goes further.',
+      f_l1: 'Where emotional wounds come from, and why they stay active',
+      f_l2: 'The role of the body and nervous system in what you feel',
+      f_l3: 'Why the same patterns repeat, within you and in your relationships',
+      f_l4: 'Simple tools to calm yourself and move forward day to day',
+      h_title: 'How sessions work',
+      h1_t: 'In French or Arabic',
+      h1_x: 'You speak in the language you feel most at ease in.',
+      h2_t: 'In person or online',
+      h2_x: 'At the practice or by video, from Morocco or abroad.',
+      h3_t: 'Confidential',
+      h3_x: 'What you share stays between us. Always.',
+      a_title: 'After you pay',
+      a1: 'You pay online by card in a few seconds.',
+      a2: 'On the confirmation page, you message me on WhatsApp in one tap.',
+      a3: 'We schedule the time together. For the programme, I also send you the starting questionnaire and access to the course.',
+      ab_kicker: 'About me',
+      ab_role: 'Entrepreneur, coach and psychotherapy practitioner, specialised in trauma and emotional dependency.',
+      ab_text: 'I have been through hard chapters myself. They taught me one thing: pain can change a person, but it does not decide their future. Today I help people understand themselves, make peace with the past and build a future that old wounds no longer govern.',
+      media_label: 'Seen on TV and in the press',
+      faq_title: 'Frequently asked questions',
+      q1: 'Which step should I start with?',
+      qa1: 'If you are unsure, start with the 30-minute discovery call. If you already know you want support, you can book the programme directly.',
+      q2: 'What if I need more than 4 sessions?',
+      qa2: 'We review together at the end of the programme. If it helps, you can continue with individual sessions at 600 MAD each.',
+      q3: 'How soon will I feel better?',
+      qa3: 'It depends on your story and what you are living today. The RED method aims for concrete change from the first sessions, but I never promise results in a fixed number of sessions.',
+      q4: 'Do I have to tell everything?',
+      qa4: 'No. You stay in control of what you share and what you keep to yourself, at all times. That is the “D” in the RED method.',
+      q5: 'Can I pay by bank transfer?',
+      qa5: 'Yes. ' + waLink('Message me on WhatsApp') + ' and I will send you the bank details.',
+      end_title: 'The first step takes 30 minutes.',
+      end_text: 'We take stock together, simply. Then you decide what comes next.',
+      end_btn: 'Book the discovery call · 300 MAD',
+      end_wa: 'A question? WhatsApp',
+      sticky_title: 'The RED method',
+      sticky_text: 'From 300 MAD · 30 min',
+      sticky_btn: 'See the options',
+      footer: '© 2026 Yousri Bendiabdallah — Psychotherapy practitioner, Morocco',
+      footer_note: 'This site does not replace medical advice. In an emergency, call 141.'
     }
   };
 
@@ -362,18 +748,19 @@
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
       b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
     });
-    document.getElementById('pay-lang').value = lang;
-    document.getElementById('wa-question').href = WA + '?text=' + encodeURIComponent(d._wa_question);
+    document.querySelectorAll('.pay-form input[name="lang"]').forEach(function (i) { i.value = lang; });
+    document.querySelectorAll('a.wa-link').forEach(function (a) {
+      a.href = WA + '?text=' + encodeURIComponent(d._wa_question);
+    });
     showAlert();
     try { localStorage.setItem('acc-lang', lang); } catch (e) {}
     // L'adresse reflète la langue : vous pouvez copier le lien et l'envoyer tel quel.
     var u = new URL(location.href);
-    if (failPath) u.pathname = '/accompagnement/';
+    if (failPath) { u.pathname = '/accompagnement/'; u.searchParams.set('paiement', 'echec'); u.hash = 'parcours'; }
     u.searchParams.set('lang', lang);
     // Paramètres ajoutés par YouCan Pay au retour : inutiles une fois lus.
     ['transaction_id', 'is_success', 'success', 'order_id', 'message', 'code']
       .forEach(function (k) { u.searchParams.delete(k); });
-    if (failPath) u.searchParams.set('paiement', 'echec');
     history.replaceState(null, '', u);
     failPath = null;
   }
@@ -385,7 +772,7 @@
     box.textContent = status === 'echec' ? T[current]._err_echec : T[current]._err_erreur;
     if (box.hidden) {
       box.hidden = false;
-      document.getElementById('paiement').scrollIntoView();
+      document.getElementById('parcours').scrollIntoView();
     }
   }
 
@@ -394,18 +781,33 @@
   });
 
   // Empêche un double clic de créer deux paiements.
-  var form = document.getElementById('pay-form');
-  form.addEventListener('submit', function () {
-    var b = form.querySelector('button');
-    b.disabled = true;
-    b.textContent = T[current]._redirect;
+  var forms = document.querySelectorAll('.pay-form');
+  forms.forEach(function (form) {
+    form.addEventListener('submit', function () {
+      forms.forEach(function (f) { f.querySelector('button').disabled = true; });
+      form.querySelector('button').textContent = T[current]._redirect;
+    });
   });
-  // Retour arrière depuis YouCan Pay : réactive le bouton.
+  // Retour arrière depuis YouCan Pay : réactive les boutons.
   window.addEventListener('pageshow', function () {
-    var b = form.querySelector('button');
-    b.disabled = false;
-    b.innerHTML = T[current].pay_btn;
+    forms.forEach(function (f) {
+      var b = f.querySelector('button');
+      b.disabled = false;
+      b.innerHTML = T[current][b.dataset.i18n];
+    });
   });
+
+  // Barre fixe sur mobile : visible après le haut de page,
+  // masquée quand les formules ou l'appel final sont à l'écran.
+  var sticky = document.getElementById('sticky');
+  if ('IntersectionObserver' in window) {
+    var seen = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { seen[e.target.id] = e.isIntersecting; });
+      sticky.classList.toggle('show', !seen.haut && !seen.parcours && !seen.fin);
+    });
+    ['haut', 'parcours', 'fin'].forEach(function (id) { io.observe(document.getElementById(id)); });
+  }
 
   apply(pick());
 })();
