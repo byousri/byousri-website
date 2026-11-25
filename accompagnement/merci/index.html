@@ -71,7 +71,7 @@
 
 <script>
 (function () {
-  // Textes communs, puis textes propres à chaque formule (appel, seance, accompagnement).
+  // Textes communs, puis textes propres à chaque formule (appel, accompagnement).
   var T = {
     fr: {
       doc: 'Paiement reçu | Yousri Bendiabdallah',
@@ -81,16 +81,10 @@
       footer: '© 2026 Yousri Bendiabdallah — Praticien en psychothérapie, Maroc',
       p: {
         appel: {
-          name: 'Prise de contact · 30 min', price: '300 DH',
+          name: 'Prise de contact · 1 h', price: '500 DH',
           title: 'Merci, votre prise de contact est réservée.',
-          text: 'Dernière étape : envoyez-moi un message sur WhatsApp pour que nous choisissions ensemble le créneau de nos 30 minutes.',
-          wa: 'Bonjour Yousri, je viens de réserver la prise de contact de 30 minutes (300 DH). Quand êtes-vous disponible ?'
-        },
-        seance: {
-          name: 'Séance individuelle · 1 h', price: '600 DH',
-          title: 'Merci, votre séance est réservée.',
-          text: 'Dernière étape : envoyez-moi un message sur WhatsApp pour que nous fixions ensemble la date de votre séance.',
-          wa: 'Bonjour Yousri, je viens de réserver une séance d’1 heure (600 DH). Quand êtes-vous disponible ?'
+          text: 'Dernière étape : envoyez-moi un message sur WhatsApp pour que nous choisissions ensemble le créneau de notre première heure.',
+          wa: 'Bonjour Yousri, je viens de réserver la prise de contact d’une heure (500 DH). Quand êtes-vous disponible ?'
         },
         accompagnement: {
           name: 'Accompagnement · 4 séances + Formation Healing', price: '3 400 DH',
@@ -113,16 +107,10 @@
       footer: '© 2026 يسري بنديبدالله — ممارس في العلاج النفسي، المغرب',
       p: {
         appel: {
-          name: 'جلسة تعارف · 30 دقيقة', price: '300 درهم',
+          name: 'جلسة التعارف · ساعة واحدة', price: '500 درهم',
           title: 'شكراً لك، تم حجز جلسة التعارف.',
-          text: 'الخطوة الأخيرة: أرسل لي رسالة عبر واتساب لنختار معاً موعد الثلاثين دقيقة.',
-          wa: 'السلام عليكم يسري، لقد حجزت للتو جلسة التعارف لمدة 30 دقيقة (300 درهم). متى تكون متاحاً؟'
-        },
-        seance: {
-          name: 'جلسة فردية · ساعة واحدة', price: '600 درهم',
-          title: 'شكراً لك، تم حجز جلستك.',
-          text: 'الخطوة الأخيرة: أرسل لي رسالة عبر واتساب لنحدد معاً موعد جلستك.',
-          wa: 'السلام عليكم يسري، لقد حجزت للتو جلسة لمدة ساعة (600 درهم). متى تكون متاحاً؟'
+          text: 'الخطوة الأخيرة: أرسل لي رسالة عبر واتساب لنختار معاً موعد جلستنا الأولى.',
+          wa: 'السلام عليكم يسري، لقد حجزت للتو جلسة التعارف لمدة ساعة (500 درهم). متى تكون متاحاً؟'
         },
         accompagnement: {
           name: 'المرافقة · 4 جلسات + تكوين Healing', price: '3400 درهم',
@@ -145,16 +133,10 @@
       footer: '© 2026 Yousri Bendiabdallah — Psychotherapy practitioner, Morocco',
       p: {
         appel: {
-          name: 'Discovery call · 30 min', price: '300 MAD',
-          title: 'Thank you, your discovery call is booked.',
-          text: 'Last step: send me a message on WhatsApp so we can pick a time for our 30 minutes.',
-          wa: 'Hello Yousri, I have just booked the 30-minute discovery call (300 MAD). When are you available?'
-        },
-        seance: {
-          name: 'Individual session · 1 hour', price: '600 MAD',
-          title: 'Thank you, your session is booked.',
-          text: 'Last step: send me a message on WhatsApp so we can schedule your session.',
-          wa: 'Hello Yousri, I have just booked a 1-hour session (600 MAD). When are you available?'
+          name: 'Discovery session · 1 hour', price: '500 MAD',
+          title: 'Thank you, your discovery session is booked.',
+          text: 'Last step: send me a message on WhatsApp so we can pick a time for our first hour together.',
+          wa: 'Hello Yousri, I have just booked the one-hour discovery session (500 MAD). When are you available?'
         },
         accompagnement: {
           name: 'Programme · 4 sessions + Healing course', price: '3,400 MAD',
@@ -173,7 +155,7 @@
 
   // Adresse de retour YouCan Pay : /accompagnement/merci/<langue>/<formule>/
   var q = new URLSearchParams(location.search);
-  var m = location.pathname.match(/\/merci\/(fr|ar|en)(?:\/(appel|seance|accompagnement))?/);
+  var m = location.pathname.match(/\/merci\/(fr|ar|en)(?:\/(appel|accompagnement))?/);
   var lang = (m && m[1]) || (T[q.get('lang')] ? q.get('lang') : 'fr');
   var product = (m && m[2]) || (String(q.get('order_id') || '').split('-')[0]);
   var d = T[lang];

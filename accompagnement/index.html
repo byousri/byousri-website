@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Méthode RED — Rapide, Efficace, Doux | Yousri Bendiabdallah</title>
-<meta name="description" content="Méthode RED : une thérapie rapide, efficace et douce. Prise de contact 30 min (300 DH), séance 1 h (600 DH), accompagnement 4 séances + Formation Healing (3 400 DH).">
+<meta name="description" content="Méthode RED : une thérapie rapide, efficace et douce. Prise de contact 1 h (500 DH), accompagnement 4 séances + Formation Healing (3 400 DH).">
 <!-- Page envoyée personnellement aux patients après un premier échange :
      elle n'est pas indexée par les moteurs de recherche.
      Langue : ?lang=fr (défaut), ?lang=ar ou ?lang=en -->
@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://byousri.com/accompagnement/">
 <meta property="og:title" content="Méthode RED — Rapide, Efficace, Doux · Yousri Bendiabdallah">
-<meta property="og:description" content="Prise de contact 30 min · Séance 1 h · Accompagnement avec la Formation Healing.">
+<meta property="og:description" content="Prise de contact 1 h · Accompagnement avec la Formation Healing.">
 <meta property="og:image" content="https://byousri.com/Share.png">
 <meta property="og:site_name" content="Yousri Bendiabdallah">
 <meta name="twitter:card" content="summary_large_image">
@@ -104,8 +104,7 @@
   }
   .red-card h3{font-family:var(--display);font-size:1.3rem;letter-spacing:-0.015em;line-height:1.3}
   .red-card p{color:var(--muted);font-size:.98rem;line-height:1.6}
-  .note{margin-top:1.5rem;font-size:.92rem;color:var(--muted);border-inline-start:3px solid var(--plum);padding-inline-start:1rem}
-
+  
   /* ---------- parcours / formules ---------- */
   .offers{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1.5rem}
   .offer{
@@ -219,7 +218,7 @@
     .about img.portrait{aspect-ratio:4/5;object-position:50% 20%}
   }
   @media (min-width:62rem){
-    .offers{grid-template-columns:repeat(3,1fr);gap:1.25rem;align-items:stretch}
+    .offers{grid-template-columns:repeat(2,1fr);gap:1.5rem;align-items:stretch;max-width:56rem}
     .offer:not(:last-child)::after{display:none}
     .offer.featured{transform:translateY(-.75rem)}
   }
@@ -262,7 +261,7 @@
   <p class="lead" data-i18n="intro">Pour les blessures qui pèsent encore aujourd’hui : traumas, dépendance affective,
   schémas qui se répètent. Un parcours clair, en trois étapes, au rythme qui vous convient.</p>
   <div class="hero-actions">
-    <a class="btn" href="#parcours" data-i18n="hero_cta">Commencer par 30 minutes</a>
+    <a class="btn" href="#parcours" data-i18n="hero_cta">Réserver la prise de contact</a>
     <a class="btn ghost" href="#methode" data-i18n="hero_cta2">Découvrir la méthode</a>
   </div>
   <div class="hero-meta">
@@ -309,7 +308,6 @@
         <p data-i18n="d_x">Vous n’avez jamais à tout raconter, ni à revivre ce qui fait mal pour avancer. Le travail se fait à votre rythme, dans un cadre sûr et bienveillant, sans jugement.</p>
       </li>
     </ul>
-    <p class="note narrow" data-i18n="red_note">Chaque histoire est différente : je ne promets pas de résultat en un nombre fixe de séances. Je m’engage à un travail clair, honnête et respectueux de votre rythme.</p>
   </div>
 </section>
 
@@ -317,8 +315,8 @@
 <section class="band alt" id="parcours">
   <div class="wrap">
     <p class="kicker" data-i18n="p_kicker">Votre parcours</p>
-    <h2 class="h2" data-i18n="p_title">Trois étapes, à votre rythme</h2>
-    <p class="lead" data-i18n="p_intro">Chaque étape est indépendante : vous décidez à chaque fois si vous continuez. Vous pouvez aussi commencer directement par l’accompagnement.</p>
+    <h2 class="h2" data-i18n="p_title">Deux étapes, à votre rythme</h2>
+    <p class="lead" data-i18n="p_intro">La prise de contact est indépendante : vous décidez ensuite si vous continuez. Vous pouvez aussi commencer directement par l’accompagnement.</p>
     <p class="pay-alert" id="pay-alert" role="alert" hidden></p>
 
     <!-- Les paiements sont créés côté serveur (netlify/functions/ycp-checkout.mjs) :
@@ -329,34 +327,20 @@
           <p class="offer-step"><span class="dot">1</span><span data-i18n="step1">Étape 1</span></p>
         </div>
         <h3 data-i18n="s1_title">Prise de contact</h3>
-        <p class="offer-meta" data-i18n="s1_meta">30 minutes</p>
-        <p class="offer-price"><bdi dir="ltr" class="nowrap">300</bdi><span class="cur" data-i18n="cur">DH</span></p>
-        <p class="offer-text" data-i18n="s1_text">On fait le point sur votre situation, je vous explique comment je travaille, et on vérifie ensemble que la méthode RED vous correspond.</p>
+        <p class="offer-meta" data-i18n="s1_meta">1 heure</p>
+        <p class="offer-price"><bdi dir="ltr" class="nowrap">500</bdi><span class="cur" data-i18n="cur">DH</span></p>
+        <p class="offer-text" data-i18n="s1_text">Une heure pour faire le point sur votre situation, commencer à travailler sur ce qui vous pèse, et vérifier ensemble que la méthode RED vous correspond.</p>
         <form method="post" action="/api/paiement" class="pay-form">
           <input type="hidden" name="product" value="appel">
           <input type="hidden" name="lang" value="fr">
-          <button class="btn" type="submit" data-i18n="s1_btn">Réserver · 300 DH</button>
+          <button class="btn" type="submit" data-i18n="s1_btn">Réserver · 500 DH</button>
         </form>
       </li>
 
-      <li class="offer" id="etape-2">
+
+      <li class="offer featured" id="etape-2">
         <div class="offer-top">
           <p class="offer-step"><span class="dot">2</span><span data-i18n="step2">Étape 2</span></p>
-        </div>
-        <h3 data-i18n="s2_title">Séance individuelle</h3>
-        <p class="offer-meta" data-i18n="s2_meta">1 heure</p>
-        <p class="offer-price"><bdi dir="ltr" class="nowrap">600</bdi><span class="cur" data-i18n="cur">DH</span></p>
-        <p class="offer-text" data-i18n="s2_text">Une séance complète pour commencer le travail en profondeur sur ce qui vous pèse, et repartir avec de premiers repères concrets.</p>
-        <form method="post" action="/api/paiement" class="pay-form">
-          <input type="hidden" name="product" value="seance">
-          <input type="hidden" name="lang" value="fr">
-          <button class="btn" type="submit" data-i18n="s2_btn">Réserver · 600 DH</button>
-        </form>
-      </li>
-
-      <li class="offer featured" id="etape-3">
-        <div class="offer-top">
-          <p class="offer-step"><span class="dot">3</span><span data-i18n="step3">Étape 3</span></p>
           <span class="badge" data-i18n="s3_badge">Le plus complet</span>
         </div>
         <h3 data-i18n="s3_title">Accompagnement</h3>
@@ -435,7 +419,7 @@
     <div>
       <p class="kicker" data-i18n="ab_kicker">Qui suis-je</p>
       <h2 class="h2" data-i18n="ab_name">Yousri Bendiabdallah</h2>
-      <p class="role" data-i18n="ab_role">Entrepreneur, coach et praticien en psychothérapie, spécialisé dans les traumas et la dépendance affective.</p>
+      <p class="role" data-i18n="ab_role">Praticien en psychothérapie, spécialisé dans les traumas et la dépendance affective.</p>
       <p data-i18n="ab_text">J’ai moi-même traversé des épreuves qui m’ont appris une chose : la douleur peut changer un homme, mais elle ne décide pas de son avenir. Aujourd’hui, j’aide chacun à se comprendre, à faire la paix avec hier et à construire un avenir que les blessures d’avant ne gouvernent plus.</p>
       <p class="media-label" data-i18n="media_label">Vu à la télévision et dans la presse</p>
       <ul class="media">
@@ -456,15 +440,15 @@
     <div class="faq">
       <details>
         <summary data-i18n="q1">Par quelle étape commencer ?</summary>
-        <p data-i18n="qa1">Si vous hésitez, commencez par la prise de contact de 30 minutes. Si vous savez déjà que vous voulez être accompagné·e, vous pouvez réserver directement l’accompagnement.</p>
+        <p data-i18n="qa1">Si vous hésitez, commencez par la prise de contact d’une heure. Si vous savez déjà que vous voulez être accompagné·e, vous pouvez réserver directement l’accompagnement.</p>
       </details>
       <details>
         <summary data-i18n="q2">Et si j’ai besoin de plus de 4 séances ?</summary>
-        <p data-i18n="qa2">Nous faisons le point ensemble à la fin de l’accompagnement. Si c’est utile, vous pouvez poursuivre avec des séances individuelles, à 600 DH la séance.</p>
+        <p data-i18n="qa2">Nous faisons le point ensemble à la fin de l’accompagnement et, si c’est utile, nous convenons ensemble de la suite.</p>
       </details>
       <details>
         <summary data-i18n="q3">En combien de temps vais-je me sentir mieux ?</summary>
-        <p data-i18n="qa3">Cela dépend de votre histoire et de ce que vous vivez aujourd’hui. La méthode RED vise des changements concrets dès les premières séances, mais je ne promets jamais de résultat en un nombre fixe de séances.</p>
+        <p data-i18n="qa3">Cela dépend de votre histoire et de ce que vous vivez aujourd’hui. La méthode RED vise des changements concrets dès les premières séances.</p>
       </details>
       <details>
         <summary data-i18n="q4">Dois-je tout raconter ?</summary>
@@ -481,13 +465,13 @@
 <!-- ======================= APPEL FINAL ======================= -->
 <section class="end" id="fin">
   <div class="wrap">
-    <h2 class="h2" data-i18n="end_title">Le premier pas tient en 30 minutes.</h2>
-    <p data-i18n="end_text">On fait le point ensemble, simplement. Vous décidez ensuite de la suite.</p>
+    <h2 class="h2" data-i18n="end_title">Le premier pas : une heure pour faire le point.</h2>
+    <p data-i18n="end_text">Simplement, sans engagement pour la suite. Vous décidez ensuite si vous voulez aller plus loin.</p>
     <div class="end-actions">
       <form method="post" action="/api/paiement" class="pay-form">
         <input type="hidden" name="product" value="appel">
         <input type="hidden" name="lang" value="fr">
-        <button class="btn light" type="submit" data-i18n="end_btn">Réserver la prise de contact · 300 DH</button>
+        <button class="btn light" type="submit" data-i18n="end_btn">Réserver la prise de contact · 500 DH</button>
       </form>
       <a class="btn ghost wa-link" href="https://wa.me/+212719597979" data-i18n="end_wa">Une question ? WhatsApp</a>
     </div>
@@ -497,7 +481,7 @@
 </main>
 
 <div class="sticky" id="sticky" aria-hidden="true">
-  <span><strong data-i18n="sticky_title">Méthode RED</strong><span data-i18n="sticky_text">Dès 300 DH · 30 min</span></span>
+  <span><strong data-i18n="sticky_title">Méthode RED</strong><span data-i18n="sticky_text">Dès 500 DH · 1 h</span></span>
   <a class="btn" href="#parcours" tabindex="-1" data-i18n="sticky_btn">Voir les formules</a>
 </div>
 
@@ -538,7 +522,7 @@
       kicker: 'منهج RED · سريع، فعّال، لطيف',
       title: 'علاج نفسي سريع، فعّال ولطيف.',
       intro: 'للجراح التي ما زالت تثقل حياتك اليوم: الصدمات النفسية، التعلّق العاطفي، والأنماط التي تتكرر. مسار واضح من ثلاث مراحل، بالإيقاع الذي يناسبك.',
-      hero_cta: 'ابدأ بـ 30 دقيقة',
+      hero_cta: 'احجز جلسة التعارف',
       hero_cta2: 'اكتشف المنهج',
       ab_name: 'يسري بنديبدالله',
       hero_meta: 'ممارس في العلاج النفسي · بالعربية والفرنسية، في المغرب وعن بُعد',
@@ -557,20 +541,15 @@
       e_x: 'لا نشتغل فقط على الحكاية، بل على ما يُبقي المعاناة حيّة اليوم: ردود فعل الجسد، المشاعر، والمعتقدات. والتغيير يُقاس في حياتك اليومية.',
       d_t: 'لطيف',
       d_x: 'لن تكون مضطراً أبداً لحكي كل شيء، ولا لإعادة عيش ما يؤلمك كي تتقدّم. يتم العمل بإيقاعك، في إطار آمن ومتفهّم، دون أحكام.',
-      red_note: 'كل قصة مختلفة: لا أعدك بنتيجة في عدد محدد من الجلسات. ألتزم بعمل واضح وصادق يحترم إيقاعك.',
       p_kicker: 'مسارك',
-      p_title: 'ثلاث مراحل، بإيقاعك',
-      p_intro: 'كل مرحلة مستقلة: أنت من يقرر في كل مرة إن كنت تريد الاستمرار. ويمكنك أيضاً أن تبدأ مباشرة بالمرافقة.',
-      step1: 'المرحلة 1', step2: 'المرحلة 2', step3: 'المرحلة 3',
+      p_title: 'مرحلتان، بإيقاعك',
+      p_intro: 'جلسة التعارف مستقلة: أنت من يقرر بعدها إن كنت تريد الاستمرار. ويمكنك أيضاً أن تبدأ مباشرة بالمرافقة.',
+      step1: 'المرحلة 1', step2: 'المرحلة 2',
       cur: 'درهم', n3: '3400',
-      s1_title: 'جلسة تعارف',
-      s1_meta: '30 دقيقة',
-      s1_text: 'نقيّم وضعك معاً، أشرح لك طريقة عملي، ونتأكد معاً أن منهج RED يناسبك.',
-      s1_btn: 'احجز · 300 درهم',
-      s2_title: 'جلسة فردية',
-      s2_meta: 'ساعة واحدة',
-      s2_text: 'جلسة كاملة لنبدأ العمل في العمق على ما يثقلك، وتخرج منها بأولى المعالم الملموسة.',
-      s2_btn: 'احجز · 600 درهم',
+      s1_title: 'جلسة التعارف',
+      s1_meta: 'ساعة واحدة',
+      s1_text: 'ساعة لنقيّم وضعك، ونبدأ العمل على ما يثقلك، ونتأكد معاً أن منهج RED يناسبك.',
+      s1_btn: 'احجز · 500 درهم',
       s3_badge: 'الأكثر شمولاً',
       s3_title: 'المرافقة',
       s3_meta: '4 جلسات + تكوين Healing',
@@ -600,26 +579,26 @@
       a2: 'من صفحة التأكيد، تراسلني عبر واتساب بنقرة واحدة.',
       a3: 'نحدد الموعد معاً. وبالنسبة للمرافقة، أرسل لك أيضاً الاستبيان الأولي ورابط الولوج إلى التكوين.',
       ab_kicker: 'من أنا',
-      ab_role: 'رجل أعمال، كوتش، وممارس في العلاج النفسي، مختص في الصدمات النفسية والتعلّق العاطفي.',
+      ab_role: 'ممارس في العلاج النفسي، مختص في الصدمات النفسية والتعلّق العاطفي.',
       ab_text: 'مررتُ بنفسي بتجارب صعبة علّمتني أن الألم قد يغيّر الإنسان، لكنه لا يحدد مستقبله. اليوم، أساعد كل شخص على فهم نفسه، والتصالح مع ماضيه، وبناء مستقبل لا تتحكم فيه جراح الأمس.',
       media_label: 'في التلفزيون والصحافة',
       faq_title: 'أسئلة متكررة',
       q1: 'بأي مرحلة أبدأ؟',
-      qa1: 'إذا كنت متردداً، ابدأ بجلسة التعارف لمدة 30 دقيقة. وإذا كنت تعرف أنك تريد مرافقة، يمكنك حجز المرافقة مباشرة.',
+      qa1: 'إذا كنت متردداً، ابدأ بجلسة التعارف لمدة ساعة. وإذا كنت تعرف أنك تريد مرافقة، يمكنك حجز المرافقة مباشرة.',
       q2: 'وإذا احتجت إلى أكثر من 4 جلسات؟',
-      qa2: 'نقيّم الوضع معاً في نهاية المرافقة. وإذا كان ذلك مفيداً، يمكنك المتابعة بجلسات فردية، بـ 600 درهم للجلسة.',
+      qa2: 'نقيّم الوضع معاً في نهاية المرافقة، وإذا كان ذلك مفيداً، نتفق معاً على الخطوات التالية.',
       q3: 'متى سأشعر بالتحسّن؟',
-      qa3: 'هذا يتوقف على قصتك وعلى ما تعيشه اليوم. يهدف منهج RED إلى تغييرات ملموسة منذ الجلسات الأولى، لكنني لا أعد أبداً بنتيجة في عدد محدد من الجلسات.',
+      qa3: 'هذا يتوقف على قصتك وعلى ما تعيشه اليوم. يهدف منهج RED إلى تغييرات ملموسة منذ الجلسات الأولى.',
       q4: 'هل يجب أن أحكي كل شيء؟',
       qa4: 'لا. تبقى دائماً متحكماً فيما تقوله وفيما تحتفظ به لنفسك. هذا هو حرف «D» في منهج RED.',
       q5: 'هل يمكنني الدفع بالتحويل البنكي؟',
       qa5: 'نعم. ' + waLink('راسلني عبر واتساب') + ' وسأرسل لك المعلومات البنكية.',
-      end_title: 'الخطوة الأولى لا تتطلب سوى 30 دقيقة.',
-      end_text: 'نقيّم الوضع معاً، ببساطة. ثم تقرر أنت ما يلي.',
-      end_btn: 'احجز جلسة التعارف · 300 درهم',
+      end_title: 'الخطوة الأولى: ساعة لنقيّم الوضع معاً.',
+      end_text: 'ببساطة، ودون أي التزام بما يلي. ثم تقرر أنت إن كنت تريد الذهاب أبعد.',
+      end_btn: 'احجز جلسة التعارف · 500 درهم',
       end_wa: 'سؤال؟ واتساب',
       sticky_title: 'منهج RED',
-      sticky_text: 'ابتداءً من 300 درهم · 30 دقيقة',
+      sticky_text: 'ابتداءً من 500 درهم · ساعة',
       sticky_btn: 'اختر صيغتك',
       footer: '© 2026 يسري بنديبدالله — ممارس في العلاج النفسي، المغرب',
       footer_note: 'هذا الموقع لا يعوّض الاستشارة الطبية. في حالة الطوارئ، اتصل بالرقم 141.'
@@ -633,7 +612,7 @@
       kicker: 'The RED method · Rapid, Effective, Done gently',
       title: 'Therapy that is rapid, effective and gentle.',
       intro: 'For the wounds that still weigh on you today: trauma, emotional dependency, patterns that keep repeating. A clear three-step path, at a pace that suits you.',
-      hero_cta: 'Start with 30 minutes',
+      hero_cta: 'Book the discovery session',
       hero_cta2: 'Discover the method',
       ab_name: 'Yousri Bendiabdallah',
       hero_meta: 'Psychotherapy practitioner · In French and Arabic, in Morocco and online',
@@ -652,20 +631,15 @@
       e_x: 'We don’t only work on the story, but on what keeps the suffering alive today: the body’s reactions, emotions and beliefs. Change is measured in your daily life.',
       d_t: 'Done gently',
       d_x: 'You never have to tell everything, or relive what hurts, to move forward. We work at your pace, in a safe, caring space, without judgment.',
-      red_note: 'Every story is different: I never promise results in a fixed number of sessions. I commit to clear, honest work that respects your pace.',
       p_kicker: 'Your path',
-      p_title: 'Three steps, at your pace',
-      p_intro: 'Each step stands on its own: you decide each time whether to continue. You can also start directly with the programme.',
-      step1: 'Step 1', step2: 'Step 2', step3: 'Step 3',
+      p_title: 'Two steps, at your pace',
+      p_intro: 'The discovery session stands on its own: you decide afterwards whether to continue. You can also start directly with the programme.',
+      step1: 'Step 1', step2: 'Step 2',
       cur: 'MAD', n3: '3,400',
-      s1_title: 'Discovery call',
-      s1_meta: '30 minutes',
-      s1_text: 'We review your situation, I explain how I work, and we check together that the RED method is right for you.',
-      s1_btn: 'Book · 300 MAD',
-      s2_title: 'Individual session',
-      s2_meta: '1 hour',
-      s2_text: 'A full session to start working in depth on what weighs on you, and leave with your first concrete markers.',
-      s2_btn: 'Book · 600 MAD',
+      s1_title: 'Discovery session',
+      s1_meta: '1 hour',
+      s1_text: 'One hour to review your situation, start working on what weighs on you, and check together that the RED method is right for you.',
+      s1_btn: 'Book · 500 MAD',
       s3_badge: 'Most complete',
       s3_title: 'Programme',
       s3_meta: '4 sessions + Healing course',
@@ -695,26 +669,26 @@
       a2: 'On the confirmation page, you message me on WhatsApp in one tap.',
       a3: 'We schedule the time together. For the programme, I also send you the starting questionnaire and access to the course.',
       ab_kicker: 'About me',
-      ab_role: 'Entrepreneur, coach and psychotherapy practitioner, specialised in trauma and emotional dependency.',
+      ab_role: 'Psychotherapy practitioner, specialised in trauma and emotional dependency.',
       ab_text: 'I have been through hard chapters myself. They taught me one thing: pain can change a person, but it does not decide their future. Today I help people understand themselves, make peace with the past and build a future that old wounds no longer govern.',
       media_label: 'Seen on TV and in the press',
       faq_title: 'Frequently asked questions',
       q1: 'Which step should I start with?',
-      qa1: 'If you are unsure, start with the 30-minute discovery call. If you already know you want support, you can book the programme directly.',
+      qa1: 'If you are unsure, start with the one-hour discovery session. If you already know you want support, you can book the programme directly.',
       q2: 'What if I need more than 4 sessions?',
-      qa2: 'We review together at the end of the programme. If it helps, you can continue with individual sessions at 600 MAD each.',
+      qa2: 'We review together at the end of the programme and, if it helps, agree on next steps together.',
       q3: 'How soon will I feel better?',
-      qa3: 'It depends on your story and what you are living today. The RED method aims for concrete change from the first sessions, but I never promise results in a fixed number of sessions.',
+      qa3: 'It depends on your story and what you are living today. The RED method aims for concrete change from the first sessions.',
       q4: 'Do I have to tell everything?',
       qa4: 'No. You stay in control of what you share and what you keep to yourself, at all times. That is the “D” in the RED method.',
       q5: 'Can I pay by bank transfer?',
       qa5: 'Yes. ' + waLink('Message me on WhatsApp') + ' and I will send you the bank details.',
-      end_title: 'The first step takes 30 minutes.',
-      end_text: 'We take stock together, simply. Then you decide what comes next.',
-      end_btn: 'Book the discovery call · 300 MAD',
+      end_title: 'The first step: one hour to take stock.',
+      end_text: 'Simply, with no commitment to what follows. Then you decide whether to go further.',
+      end_btn: 'Book the discovery session · 500 MAD',
       end_wa: 'A question? WhatsApp',
       sticky_title: 'The RED method',
-      sticky_text: 'From 300 MAD · 30 min',
+      sticky_text: 'From 500 MAD · 1 h',
       sticky_btn: 'See the options',
       footer: '© 2026 Yousri Bendiabdallah — Psychotherapy practitioner, Morocco',
       footer_note: 'This site does not replace medical advice. In an emergency, call 141.'
