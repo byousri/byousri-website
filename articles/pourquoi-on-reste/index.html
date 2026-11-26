@@ -6,6 +6,10 @@
 <title>Pourquoi on reste dans une relation qui fait mal | Yousri Bendiabdallah</title>
 <meta name="description" content="Savoir qu’une relation fait mal ne suffit jamais à la quitter. Les mécanismes qui retiennent — intermittence, doute, isolement, espoir — et par où commencer pour retrouver sa capacité de choisir.">
 <link rel="canonical" href="https://byousri.com/articles/pourquoi-on-reste/">
+<link rel="alternate" hreflang="fr" href="https://byousri.com/articles/pourquoi-on-reste/">
+<link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/pourquoi-on-reste/">
+<link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/pourquoi-on-reste/">
+<link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/pourquoi-on-reste/">
 <meta name="author" content="Yousri Bendiabdallah">
 
 <meta property="og:type" content="article">
@@ -14,6 +18,8 @@
 <meta property="og:description" content="Savoir qu’une relation fait mal ne suffit jamais à la quitter. Les mécanismes qui retiennent — intermittence, doute, isolement, espoir — et par où commencer pour retrouver sa capacité de choisir.">
 <meta property="og:image" content="https://byousri.com/Share.png">
 <meta property="og:locale" content="fr_MA">
+<meta property="og:locale:alternate" content="ar_MA">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="Yousri Bendiabdallah">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -131,12 +137,19 @@
       <img src="/Logo%20transparent.png" alt="" width="128" height="128">
       <span>Yousri Bendiabdallah</span>
     </a>
-    <nav class="site-nav" aria-label="Navigation principale">
-      <a href="/">Accueil</a>
-      <a href="/traumas/">Traumas</a>
-      <a href="/dependance-affective/">Dépendance affective</a>
-      <a href="/articles/">Articles</a>
-    </nav>
+    <div class="header-right">
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="/">Accueil</a>
+        <a href="/traumas/">Traumas</a>
+        <a href="/dependance-affective/">Dépendance affective</a>
+        <a href="/articles/">Articles</a>
+      </nav>
+      <nav class="lang-links" aria-label="Langue / اللغة / Language">
+        <a href="/articles/pourquoi-on-reste/" hreflang="fr" lang="fr" aria-current="true">FR</a>
+        <a href="/ar/articles/pourquoi-on-reste/" hreflang="ar" lang="ar">AR</a>
+        <a href="/en/articles/pourquoi-on-reste/" hreflang="en" lang="en">EN</a>
+      </nav>
+    </div>
   </div>
 </header>
 <nav class="breadcrumb wrap" aria-label="Fil d'Ariane">
@@ -326,5 +339,10 @@ prendrons le temps d’en parler, sans que vous ayez à décider quoi que ce soi
     </nav>
   </div>
 </footer>
+<script>
+document.querySelectorAll('.lang-links a').forEach(function(a){
+  a.addEventListener('click',function(){try{localStorage.setItem('lang',a.getAttribute('hreflang'))}catch(e){}});
+});
+</script>
 </body>
 </html>

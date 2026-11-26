@@ -166,3 +166,26 @@ footer .legal p{margin-top:.8em}
 @media (max-width:40rem){
   .cta-block .phone{display:block;margin:1.1rem 0 0}
 }
+
+/* ---------- sélecteur de langue ---------- */
+.header-right{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+.lang-links{display:flex;border:1px solid var(--chalk);font-size:.78rem;font-weight:600;letter-spacing:.08em}
+.lang-links a{padding:.32em .7em;text-decoration:none;opacity:.85}
+.lang-links a:hover{opacity:1}
+.lang-links a[aria-current="true"]{background:var(--chalk);color:var(--ink);opacity:1}
+
+/* ---------- arabe (RTL) ---------- */
+html[lang="ar"] body{font-family:"Noto Naskh Arabic", serif;font-size:1.12rem;line-height:1.95}
+html[lang="ar"] .display,
+html[lang="ar"] article h2,
+html[lang="ar"] article h3,
+html[lang="ar"] .cards h2,
+html[lang="ar"] .cards h3,
+html[lang="ar"] .cta-block h2,
+html[lang="ar"] .cta,
+html[lang="ar"] .brand span{font-family:"Noto Kufi Arabic", sans-serif;letter-spacing:0;line-height:1.45}
+html[lang="ar"] .kicker{letter-spacing:.04em;font-size:.9rem}
+html[lang="ar"] .lang-links{letter-spacing:0}
+html[dir="rtl"] article ul,html[dir="rtl"] article ol{margin:0 1.35rem 1.4rem 0}
+html[dir="rtl"] blockquote{border-left:none;border-right:3px solid var(--plum);padding:.2rem 1.4rem .2rem 0}
+html[dir="rtl"] .breadcrumb li+li::before{content:"‹"}

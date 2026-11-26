@@ -6,6 +6,10 @@
 <title>Articles sur le trauma et la dépendance affective | Yousri Bendiabdallah</title>
 <meta name="description" content="Articles de fond sur le trauma psychique, la dépendance affective et les liens douloureux, par Yousri Bendiabdallah, praticien en psychothérapie au Maroc.">
 <link rel="canonical" href="https://byousri.com/articles/">
+<link rel="alternate" hreflang="fr" href="https://byousri.com/articles/">
+<link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/">
+<link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/">
+<link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/">
 <meta name="author" content="Yousri Bendiabdallah">
 
 <meta property="og:type" content="website">
@@ -14,6 +18,8 @@
 <meta property="og:description" content="Articles de fond sur le trauma psychique, la dépendance affective et les liens douloureux, par Yousri Bendiabdallah, praticien en psychothérapie au Maroc.">
 <meta property="og:image" content="https://byousri.com/Share.png">
 <meta property="og:locale" content="fr_MA">
+<meta property="og:locale:alternate" content="ar_MA">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="Yousri Bendiabdallah">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -115,12 +121,19 @@
       <img src="/Logo%20transparent.png" alt="" width="128" height="128">
       <span>Yousri Bendiabdallah</span>
     </a>
-    <nav class="site-nav" aria-label="Navigation principale">
-      <a href="/">Accueil</a>
-      <a href="/traumas/">Traumas</a>
-      <a href="/dependance-affective/">Dépendance affective</a>
-      <a href="/articles/" aria-current="page">Articles</a>
-    </nav>
+    <div class="header-right">
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="/">Accueil</a>
+        <a href="/traumas/">Traumas</a>
+        <a href="/dependance-affective/">Dépendance affective</a>
+        <a href="/articles/" aria-current="page">Articles</a>
+      </nav>
+      <nav class="lang-links" aria-label="Langue / اللغة / Language">
+        <a href="/articles/" hreflang="fr" lang="fr" aria-current="true">FR</a>
+        <a href="/ar/articles/" hreflang="ar" lang="ar">AR</a>
+        <a href="/en/articles/" hreflang="en" lang="en">EN</a>
+      </nav>
+    </div>
   </div>
 </header>
 <nav class="breadcrumb wrap" aria-label="Fil d'Ariane">
@@ -213,5 +226,10 @@
     </nav>
   </div>
 </footer>
+<script>
+document.querySelectorAll('.lang-links a').forEach(function(a){
+  a.addEventListener('click',function(){try{localStorage.setItem('lang',a.getAttribute('hreflang'))}catch(e){}});
+});
+</script>
 </body>
 </html>

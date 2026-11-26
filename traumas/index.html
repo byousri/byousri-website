@@ -6,6 +6,10 @@
 <title>Trauma psychique : comprendre ce qui reste et s’en libérer | Yousri Bendiabdallah</title>
 <meta name="description" content="Qu’est-ce qu’un trauma, comment il continue d’agir des années après, et ce qui aide réellement à s’en libérer. Par Yousri Bendiabdallah, praticien en psychothérapie au Maroc, en français et en arabe.">
 <link rel="canonical" href="https://byousri.com/traumas/">
+<link rel="alternate" hreflang="fr" href="https://byousri.com/traumas/">
+<link rel="alternate" hreflang="ar" href="https://byousri.com/ar/traumas/">
+<link rel="alternate" hreflang="en" href="https://byousri.com/en/traumas/">
+<link rel="alternate" hreflang="x-default" href="https://byousri.com/traumas/">
 <meta name="author" content="Yousri Bendiabdallah">
 
 <meta property="og:type" content="article">
@@ -14,6 +18,8 @@
 <meta property="og:description" content="Qu’est-ce qu’un trauma, comment il continue d’agir des années après, et ce qui aide réellement à s’en libérer. Par Yousri Bendiabdallah, praticien en psychothérapie au Maroc, en français et en arabe.">
 <meta property="og:image" content="https://byousri.com/Share.png">
 <meta property="og:locale" content="fr_MA">
+<meta property="og:locale:alternate" content="ar_MA">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="Yousri Bendiabdallah">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -141,12 +147,19 @@
       <img src="/Logo%20transparent.png" alt="" width="128" height="128">
       <span>Yousri Bendiabdallah</span>
     </a>
-    <nav class="site-nav" aria-label="Navigation principale">
-      <a href="/">Accueil</a>
-      <a href="/traumas/" aria-current="page">Traumas</a>
-      <a href="/dependance-affective/">Dépendance affective</a>
-      <a href="/articles/">Articles</a>
-    </nav>
+    <div class="header-right">
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="/">Accueil</a>
+        <a href="/traumas/" aria-current="page">Traumas</a>
+        <a href="/dependance-affective/">Dépendance affective</a>
+        <a href="/articles/">Articles</a>
+      </nav>
+      <nav class="lang-links" aria-label="Langue / اللغة / Language">
+        <a href="/traumas/" hreflang="fr" lang="fr" aria-current="true">FR</a>
+        <a href="/ar/traumas/" hreflang="ar" lang="ar">AR</a>
+        <a href="/en/traumas/" hreflang="en" lang="en">EN</a>
+      </nav>
+    </div>
   </div>
 </header>
 <nav class="breadcrumb wrap" aria-label="Fil d'Ariane">
@@ -421,5 +434,10 @@ que les blessures d’avant ne gouvernent plus.</p>
     </nav>
   </div>
 </footer>
+<script>
+document.querySelectorAll('.lang-links a').forEach(function(a){
+  a.addEventListener('click',function(){try{localStorage.setItem('lang',a.getAttribute('hreflang'))}catch(e){}});
+});
+</script>
 </body>
 </html>

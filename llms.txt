@@ -69,8 +69,10 @@ Yousri Bendiabdallah est intervenu dans les médias suivants :
 
 ## Contenus de fond
 
-Textes écrits par Yousri Bendiabdallah à partir de sa pratique clinique. Ils
-sont en français.
+Textes écrits par Yousri Bendiabdallah à partir de sa pratique clinique.
+Version originale en français ; chaque texte existe aussi en arabe (préfixe
+/ar/, ex. https://byousri.com/ar/traumas/) et en anglais (préfixe /en/,
+ex. https://byousri.com/en/traumas/).
 
 - [Le trauma psychique : comprendre ce qui reste, et s'en libérer](https://byousri.com/traumas/) :
   page de référence sur le trauma. Ce qu'est un trauma (l'empreinte, pas
@@ -94,6 +96,8 @@ sont en français.
   déroulé concret d'un premier rendez-vous, ce qui est demandé et ce qui ne
   l'est pas, durée, fréquence, langue, séances à distance.
 - [Tous les articles](https://byousri.com/articles/)
+- [كل المقالات (العربية)](https://byousri.com/ar/articles/)
+- [All articles (English)](https://byousri.com/en/articles/)
 
 ## Résumé en arabe / ملخص بالعربية
 

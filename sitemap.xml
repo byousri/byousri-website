@@ -13,37 +13,181 @@
   </url>
   <url>
     <loc>https://byousri.com/traumas/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/traumas/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/traumas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/traumas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/traumas/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/ar/traumas/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/traumas/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/traumas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/traumas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/traumas/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/en/traumas/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/traumas/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/traumas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/traumas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/traumas/"/>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://byousri.com/dependance-affective/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/dependance-affective/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/dependance-affective/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/dependance-affective/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/dependance-affective/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/ar/dependance-affective/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/dependance-affective/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/dependance-affective/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/dependance-affective/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/dependance-affective/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/en/dependance-affective/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/dependance-affective/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/dependance-affective/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/dependance-affective/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/dependance-affective/"/>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://byousri.com/articles/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/ar/articles/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/en/articles/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/"/>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://byousri.com/articles/signes-trauma-ancien/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/signes-trauma-ancien/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/signes-trauma-ancien/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/signes-trauma-ancien/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/signes-trauma-ancien/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/ar/articles/signes-trauma-ancien/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/signes-trauma-ancien/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/signes-trauma-ancien/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/signes-trauma-ancien/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/signes-trauma-ancien/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/en/articles/signes-trauma-ancien/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/signes-trauma-ancien/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/signes-trauma-ancien/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/signes-trauma-ancien/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/signes-trauma-ancien/"/>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://byousri.com/articles/pourquoi-on-reste/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/pourquoi-on-reste/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/pourquoi-on-reste/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/pourquoi-on-reste/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/pourquoi-on-reste/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/ar/articles/pourquoi-on-reste/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/pourquoi-on-reste/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/pourquoi-on-reste/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/pourquoi-on-reste/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/pourquoi-on-reste/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/en/articles/pourquoi-on-reste/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/pourquoi-on-reste/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/pourquoi-on-reste/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/pourquoi-on-reste/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/pourquoi-on-reste/"/>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://byousri.com/articles/premiere-seance/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/premiere-seance/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/premiere-seance/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/premiere-seance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/premiere-seance/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/ar/articles/premiere-seance/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/premiere-seance/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/premiere-seance/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/premiere-seance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/premiere-seance/"/>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://byousri.com/en/articles/premiere-seance/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://byousri.com/articles/premiere-seance/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://byousri.com/ar/articles/premiere-seance/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byousri.com/en/articles/premiere-seance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byousri.com/articles/premiere-seance/"/>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
